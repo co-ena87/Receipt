@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(244, 190, 163);
+    /* 모자이크 , 포컷싱 아웃 스타일 원함*/
+}
+
+.receit_form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(221,217,215);
+    width: 300px;
+    height: 714px;
+    
+}
+
+
+.part_one{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 186px;
+    height: 59px;
+    
+
+}
+.part_two{
+    width:  186px;
+    height: 410px;
+}
+
+
+.part_last{
+   
+    width: 186px;
+    height: 80px;
+    
+}
+
+
+#user_text{
+    width:  186px;
+    height: 410px;
+    margin-top: 30px;
+}
+
+
+
+#dashed_one{
+    border: 1px dashed black;
+    width: 186px ;
+    margin-top: 10px;
+}
+
+
+#dashed_two{
+    border: 1px dashed black;
+    width: 186px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
