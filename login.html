@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<link href="./css/login.css" rel="stylesheet"/>
+<link href="./css/style.css" rel="stylesheet"/>
 
 <body>
-    <div id="login_form">
-        <div>
-            <input id="input_id" placeholder="ID를 입력하세요" minlength="3" maxlength="8" required/>
-        </div>
+ <h1>log a movie</h1>
+ 
+<!-- 배경 이미지-->
+ <div class='backgroundImg'>
+    <img src="img/background.jpg">
+ </div>    
 
-        <div>
-            <input id="input_pw" placeholder="PW를 입력하세요"  minlength="5" maxlength="10" required/>
-        </div>
-        
+ <!--로그인폼-->
+<form class="login-form">
+    <div class="login-input">
+        <input id="userID" type="text" placeholder="UserID"/>
+        <input id="userPW" type="password" placeholder="UserPW"/>
+        <button id="login_btn" type="button">Login</button>
     </div>
+</form>
+    
 
-    <div id="log_button_form">
-        <button href="/resite.html" id='login_butn'>로그인</button>
-        <button id='logout_butn'>로그아웃</button>
-    </div>
-  
+<script src="js/login.js"></script>
 </body>
 </html>
