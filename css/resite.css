@@ -1,0 +1,112 @@
+
+body{
+    height:100vh;
+    display: flex;
+}
+
+.backgroundImg img{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.backgroundImg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+}
+
+
+.resite-form{
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 100vh;
+    border:2px solid black
+}
+
+
+.top-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+#logo{
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: 80px;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 33,
+    "SCAN" -7;
+    margin-top: 20px;
+    margin-left: -290px;
+    margin-bottom: 10px;
+}
+
+#logo-dot-line{
+    border: 1px dashed black;
+    width: 360px;
+    margin: 3px;
+}
+
+
+#movie{
+  font-family: "Doto", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 63;
+  margin-left:-40px;
+  margin-top: 20px;
+}
+
+
+#movie-title{
+   font-family: "Diphylleia", serif;
+   font-weight: 400;
+   font-style:normal;
+}
+
+
+
+#director{
+    margin-top: 11px;
+    font-size:23px ;
+}
+
+#dir-name{
+    margin-top: 8px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-size: 23px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.star-score i{
+    margin-top:19px;
+    border: 3px dashed black;
+}
+
+#top-box-dot-line{
+    border: 1px dashed black;
+    width: 300px;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
