@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resite</title>
 </head>
+
 <style>
 /*logo font*/
-@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
 
 /*movie font*/
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
 
 /*movie-title font*/
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
 
 </style>
 
@@ -24,38 +22,40 @@
 
 <body>
 <!-- 배경 이미지-->
-    <div class='backgroundImg'>
-        <img src="img/background.jpg">
-    </div>  
+<div class="backImg">
+    <img id="base-img" src="img/background.jpg">
+    <img id="noise-img" src="img/plase.jpg">
+</div>
+
 <!--메인 영수증 폼-->
-    <div class="resite-form">
-        <div class="top-box">
-            <div id="logo">resite</div>
-
-            <div id="logo-dot-line"></div>
-                <div id="logo-dot-line"></div>
-                
-            
-
-            <div id="movie">Movie Title :
-                <span id="movie-title">밀양</span>
-            </div>
-
-            <div id="director">Movie Director
-                <div id="dir-name">이창동</div>
-            </div>
-        
-            <div class="star-score">
-                <span id="score-one"><i class="fa-regular fa-star fa-2x"></i></span>
-                <span id="score-two"><i class="fa-regular fa-star fa-2x"></i></span>
-                <span id="score-third"><i class="fa-regular fa-star fa-2x"></i></span>
-                <span id="score-fourth"><i class="fa-regular fa-star fa-2x"></i></span>
-                <span id="score-fifth"><i class="fa-regular fa-star fa-2x"></i></span>
-            </div>
-
-            <div id="top-box-dot-line"></div>
+<div class="resite-form">
+    <div class="top-box">
+        <div id="logo">resite</div>
+        <div id="logo-dot-line"></div>
+        <div id="logo-dot-line"></div>
+        <!--실제 화면  점선-->        
+        <div id="movie">Movie Title :
+            <span id="movie-title">밀양</span>
         </div>
-    </div>    
+        <div id="director">Movie Director
+            <div id="dir-name">이창동</div>
+        </div>
+        
+        <div class="star-score">
+            <span id="score-one"><i class="fa-regular fa-star fa-2x"></i>
+            </span>
+            <span id="score-two"><i class="fa-regular fa-star fa-2x"></i>
+            </span>
+            <span id="score-third"><i class="fa-regular fa-star fa-2x"></i>
+            </span>
+            <span id="score-fourth"><i class="fa-regular fa-star fa-2x"><i>
+            </span>
+            <span id="score-fifth"><i class="fa-regular fa-star fa-2x"></i>
+            </span>    
+        </div>
+    </div>
+    <div id="top-box-dot-line"></div>
+</div>   
 
 </body>
 <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous">    
