@@ -16,45 +16,94 @@
 /*movie-title font*/
 @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
 
+/*dir-name font (감독)*/
+@import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
+
 </style>
 
 <link href="css/style.css" rel="stylesheet"/>
+<link href="css/resite.css" rel="stylesheet"/>
 
 <body>
 <!-- 배경 이미지-->
 <div class="backImg">
     <img id="base-img" src="img/background.jpg">
-    <img id="noise-img" src="img/plase.jpg">
+    <img id="noise-img" src="img/noise.jpg">
 </div>
 
 <!--메인 영수증 폼-->
 <div class="resite-form">
     <div class="top-box">
         <div id="logo">resite</div>
-        <div id="logo-dot-line"></div>
-        <div id="logo-dot-line"></div>
-        <!--실제 화면  점선-->        
+        <!--실제 화면  점선-->     
+        <div class="logo-dot-line"></div>
+        <div class="logo-dot-line"></div>
+        <!--실제 화면  점선-->     
         <div id="movie">Movie Title :
             <span id="movie-title">밀양</span>
         </div>
         <div id="director">Movie Director
             <div id="dir-name">이창동</div>
         </div>
-        
+        <!--아이콘 점수판-->
         <div class="star-score">
-            <span id="score-one"><i class="fa-regular fa-star fa-2x"></i>
+            <span id="score-one">
+                <i class="fa-regular fa-star fa-2x"></i>
             </span>
-            <span id="score-two"><i class="fa-regular fa-star fa-2x"></i>
+            <span id="score-two">
+                <i class="fa-regular fa-star fa-2x"></i>
             </span>
-            <span id="score-third"><i class="fa-regular fa-star fa-2x"></i>
+            <span id="score-third">
+                <i class="fa-regular fa-star fa-2x"></i>
             </span>
-            <span id="score-fourth"><i class="fa-regular fa-star fa-2x"><i>
+            <span id="score-fourth">
+                <i class="fa-regular fa-star fa-2x"></i>
             </span>
-            <span id="score-fifth"><i class="fa-regular fa-star fa-2x"></i>
-            </span>    
+            <span id="score-fifth">
+                <i class="fa-regular fa-star fa-2x"></i>
+            </span>   
+            <div class="last-dot-line"></div>
+        </div>
+    </div> 
+
+    <div class="middle-box">
+        <div class="user-review">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non adipisci neque vitae. Esse quam rem fugit dignissimos ullam quisquam natus earum architecto laboriosam, maiores beatae. Officia rem minus eius voluptate ea. Maxime unde recusandae, tempora ipsum quae odit explicabo suscipit modi libero! Hic reiciendis impedit numquam maiores. Vitae quos at modi alias molestias temporibus. Facere molestias, aperiam distinctio rerum tempora sit nulla dolore accusantium quis modi magni pariatur nostrum dignissimos possimus. Unde quisquam, adipisci veritatis beatae soluta dolorum laboriosam distinctio perspiciatis! Quod dicta quos fugit atque cupiditate eum temporibus dolore doloribus eius, facere officiis necessitatibus aliquid voluptatem obcaecati iusto?
+                </p>
+            </div>
+        </div>
+
+        <div class="actor-form">
+            <div class="actor">
+                <p>actor  </p>
+                <p>actor  </p> 
+                <p>actor  </p> 
+                <p>actor  </p> 
+                <p>actor  </p> 
+                <p>actor  </p> 
+            </div> 
+        </div>    
+
+        <div class="actor-dotline">
+            <p class='name-line'>-----------------</p>
+            <p class='name-line'>-----------------</p>
+            <p class='name-line'>-----------------</p>
+            <p class='name-line'>-----------------</p>
+            <P class='name-line'>-----------------</p>
+            <P class='name-line'>-----------------</p>
+        </div>
+
+        <div class='act-name'>
+            <p class='name-padding'>Zoe</p>
+            <p class='name-padding'>Mico</p>
+            <p class='name-padding'>Luca</p>
+            <p class='name-padding'>Tom</p>
+            <p class='name-padding'>Olivia</p>
+            <p class='name-padding'>Jasion</p>
         </div>
     </div>
-    <div id="top-box-dot-line"></div>
+
 </div>   
 
 </body>
