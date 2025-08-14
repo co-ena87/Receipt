@@ -70,9 +70,10 @@ body{
     font-variation-settings:
     "BLED" 33,
     "SCAN" -7;
-    margin-top: 20px;
+    margin-top: 45px;
     margin-left: -290px;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .logo-dot-line{
@@ -126,7 +127,7 @@ body{
     
 }
 
-.last-dot-line{
+.top-box-dot-line{
     border: 1px dashed black;
     width: 300px;
     margin-top: 40px;
@@ -137,49 +138,91 @@ body{
     text-align: justify;
     text-indent: 1em;
     line-height: 1.8;
+    font-family: "Stardos Stencil", system-ui;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
 }
+
 
 .user-review div{
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;  
+    margin-bottom: 150px;
 }
 
 
-.actor-form{
+
+.last-box-dot-line{
+    border:1px dashed black;
+}
+
+.last-box{
     display: flex;
+    width: 300px;
+    height: 100%;
+}
+
+.actor-form{ 
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-family: "Special Elite", system-ui;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.actor-form-content{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+
+.cast-list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top: 20px;
+}
+
+
+#cast-name{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-family: "Diphylleia", serif;
+    font-size: 17px;  
+    margin-left: 10px;
     
-     
 }
 
-.actor{
+#character-name{
     display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 100px;
-    margin-top: 60px;
-    margin-left: 40px;
-    justify-content: flex-start;
-}
-
-.actor p{
-    margin-bottom: 20px;
+    justify-content:flex-end;
+    font-family: "Diphylleia", serif;
+    font-size: 17px;  
+    margin-right:40px;
+  /*  margin-top: -40px; 여기서부터 수정 해야함 */
+  
 }
 
 
-.actor-dotline{
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 400px;
-    margin-top:60px;
+
+.act-form-dot-line{
+    border:1px dashed black;
+    width: 330px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     
-}   
+}
 
-.act-name{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    height: 300px;
-    width: 100px;
+.cast-list img{
+    width: 90px;
+    height:90px;
+    border-radius: 30px;
 }
