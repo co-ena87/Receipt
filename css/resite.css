@@ -1,230 +1,198 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 300vh;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+body {
+  margin: 0;
+  padding: 0;
+  height: 300vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.backImg{
-    position:absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+.backImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 #base-img,
-#noise-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#noise-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#base-img{
-    z-index: 1;
-    opacity: 0.96;
+#base-img {
+  z-index: 1;
+  opacity: 0.96;
 }
-#noise-img{
-    z-index: 2;
-    opacity: 0.77;
-    pointer-events: none;
-}
-
-.resite-form{
-    position: relative;
-    width: 400px;
-    height: 100%;
-    margin: 0 auto;
-    z-index: 3;
-    border:2px solid black;
-    background-color: white;
+#noise-img {
+  z-index: 2;
+  opacity: 0.77;
+  pointer-events: none;
 }
 
-.top-box{
-    display: flex;
-    position: relative;
-    width: 400px;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    z-index:2;
+.resite-form {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+  border: 2px solid black;
+  background-color: white;
 }
 
-
-#logo{
-    font-family: "Workbench", sans-serif;
-    font-optical-sizing: 80px;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-    "BLED" 33,
-    "SCAN" -7;
-    margin-top: 45px;
-    margin-left: -290px;
-    margin-bottom: 10px;
-    font-size: 20px;
+.top-box {
+  display: flex;
+  position: relative;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
-.logo-dot-line{
-    border: 1px dashed black;
-    width: 360px;
-    margin: 3px;
+#logo {
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: 80px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 33, "SCAN" -7;
+  margin-top: 45px;
+  margin-left: -290px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-
-#movie{
-    font-family: "Doto", sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings:
-    "ROND" 63;
-    margin-left:-40px;
-    margin-top: 20px;
+.logo-dot-line {
+  border: 1px dashed black;
+  width: 360px;
+  margin: 3px;
 }
 
-
-#movie-title{
-    font-family: "Diphylleia", serif;
-    font-weight: 400;
-    font-style:normal;
-}
-
-#director{
-    margin-top: 25px;
-    font-size:23px ;
-    font-family: "Sancreek", serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-
-#dir-name{
-    margin-top: 8px;
-    margin-left: 40px;
-    margin-bottom: 30px;
-    font-size: 23px;
-    font-weight: lighter;
-    font-style: italic;
-}
-
-.star-score i{
-    margin-top:19px;
-    margin-left: 30px;
-    margin-right: -30px;
-    border: 3px dashed black;
-    
-}
-
-.top-box-dot-line{
-    border: 1px dashed black;
-    width: 300px;
-    margin-top: 40px;
-    margin-bottom: 60px;
-}
-
-.user-review p{
-    text-align: justify;
-    text-indent: 1em;
-    line-height: 1.8;
-    font-family: "Stardos Stencil", system-ui;
-    font-weight: 600;
-    font-size: 18px;
-    font-style: normal;
-}
-
-
-.user-review div{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;  
-    margin-bottom: 150px;
-}
-
-
-
-.last-box-dot-line{
-    border:1px dashed black;
-}
-
-.last-box{
-    display: flex;
-    width: 300px;
-    height: 100%;
-}
-
-.actor-form{ 
-    margin-left: 20px;
-    margin-bottom: 30px;
-    font-family: "Special Elite", system-ui;
-    font-weight: 200;
-    font-style: normal;
-}
-
-.actor-form-content{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 50px;
-}
-
-
-
-.cast-card{
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-}
-
-.cast-name{
-    display: block;
-    font-family: "Diphylleia", serif;
-    margin-top:10px;
-    margin-left: 15px;
-    font-size: 20px;
-}
-
-.cast-card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 30%;
-  border: 3px dotted black;
+#movie {
+  font-family: "Doto", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "ROND" 63;
+  margin-left: -40px;
   margin-top: 20px;
+}
+
+#movie-title {
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#director {
+  margin-top: 25px;
+  font-size: 23px;
+  font-family: "Sancreek", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+#dir-name {
+  margin-top: 8px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  font-size: 23px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.star-score i {
+  margin-top: 19px;
+  margin-left: 30px;
+  margin-right: -30px;
+  border: 3px dashed black;
+}
+
+.top-box-dot-line {
+  border: 1px dashed black;
+  width: 300px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.user-review p {
+  text-align: justify;
+  text-indent: 1em;
+  line-height: 1.8;
+  font-family: "Stardos Stencil", system-ui;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.user-review div {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 150px;
+}
+
+
+
+
+.index-box {
+  font-family: "Special Elite", system-ui;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.cast-character span{
+    margin-left: 50px;
+    margin-right: 80px;
+}
+
+.act-form-dot-line {
+  border: 1px dashed black;
+  width: 300px;
+  margin-left: 40px;
+  
+}
+
+.actor-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.actor-name {
   margin-left: 15px;
+  font-family: "Diphylleia", serif;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.actor-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  border: 2px dotted black;
+  margin-top: 13px;
+  margin-left: 40px;
   margin-bottom: 8px;
 }
 
-.character-name{
-    font-family: "Diphylleia", serif;
-    font-size: 18px;
-    display: flex;
-    width: 90px;
-    height: 90px;
-    flex-direction: column;
-    justify-content: right;
-    
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-family: "Diphylleia", serif;
+  font-size: 20px;
 }
 
 
-
-
-
-.act-form-dot-line{
-    border:1px dashed black;
-    width: 330px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
