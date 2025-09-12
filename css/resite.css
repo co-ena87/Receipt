@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 300vh;
+  height: 360vh;
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -44,7 +44,7 @@ body {
 .resite-form {
   position: relative;
   width: 400px;
-  height: 100%;
+  height: 300vh;
   margin: 0 auto;
   z-index: 3;
   border: 2px solid black;
@@ -68,7 +68,19 @@ body {
   font-style: normal;
   font-variation-settings: "BLED" 33, "SCAN" -7;
   margin-top: 45px;
-  margin-left: -290px;
+  margin-left:5px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+#date{
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: 80px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 33, "SCAN" -7;
+  margin-top: 20px;
+  margin-right: -230px;
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -134,7 +146,10 @@ body {
   font-weight: 600;
   font-size: 18px;
   font-style: normal;
+  
 }
+
+/* last box css*/
 
 .user-review div {
   margin-top: 20px;
@@ -143,19 +158,37 @@ body {
   margin-bottom: 150px;
 }
 
-
-
-
 .index-box {
   font-family: "Special Elite", system-ui;
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
+  
 }
 
-.cast-character span{
-    margin-left: 50px;
-    margin-right: 80px;
+#watcha-pedia {
+  font-family: "Maiden Orange", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 70px;
+  margin-bottom: -50px;
+  font-size: 28px;
+}
+
+#watcha-qr {
+  width: 290px;
+  height: 290px;
+  padding-top: 20px;
+  margin-left: 45px;
+  margin-top: -120px;
+  margin-bottom: 50px;
+}
+
+
+
+.cast-character span {
+  margin-left: 50px;
+  margin-right: 80px;
 }
 
 .act-form-dot-line {
@@ -191,52 +224,84 @@ body {
 .character-card {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   font-family: "Diphylleia", serif;
   font-size: 18px;
 }
 
-.character-card div{
+.character-card i {
+  margin-top: -40px;
+  margin-left: -50px;
+}
+
+.character-card div {
   margin-top: 29px;
   margin-bottom: 80px;
   margin-left: -50px;
 }
 
-
-
-#actor-inform-grid{
+#actor-inform-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-   /* 2열을 동일한 너비로 나눔 */
+  grid-template-columns: 1fr 1fr;
+  /* 2열을 동일한 너비로 나눔 */
   gap: 20px;
-  justify-content: center; 
-} 
+  justify-content: center;
+}
 
+.act-form-dot-line-end {
+  border: 1px dashed black;
+  width: 300px;
+  margin-left: 40px;
+  margin-top: 60px;
+  margin-bottom:10px;
+}
 
-.act-form-dot-line-end{
-    border: 1px dashed black;
-    width: 300px;
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    
+.act-form-dot-line--end{
+  /* tag 박스 점선 마지막 라인 */
+  border: 1px dashed black;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 
 
-
-
-
-
-#share div {
-  font-family: "Jersey 15 Charted", sans-serif;
+#share{
+  font-family: "Rubik Distressed", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
-  margin-left: 20px;
-  margin-top: 150px;
+  font-size: 24px;
+  margin-left: 45px;
+  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
-#share i {
-  height: 30px; 
-  width: 30px;
+.sharing-thing i {
+  margin-left: 40px;
+  margin-bottom: 70px;
+  margin-top: 20px;
+} 
+
+#people-tag div{
+  font-family: "Doto", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "ROND" 63;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+
+#people-tag span{
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+  font-style: italic;
+  margin-left: 40px;
+  margin-right: -33px;
+}
+
+.bar-cod img{
+  margin-top:300px;
+  width: 100%;
 }
