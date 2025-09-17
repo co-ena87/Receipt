@@ -34,6 +34,7 @@ body {
 #base-img {
   z-index: 1;
   opacity: 0.96;
+   pointer-events: none;
 }
 #noise-img {
   z-index: 2;
