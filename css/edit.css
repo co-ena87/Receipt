@@ -137,12 +137,19 @@ body {
   font-style: italic;
 }
 
-.star-score i {
+#star-icons i {
   margin-top: 19px;
-  margin-left: 30px;
-  margin-right: -30px;
-  border: 3px dashed black;
+  margin-left:5px;
+  color: "";
+  cursor: pointer;
+  user-select: none;  
+  transition: color 0.01s ease;
 }
+
+#star-icons i.active{
+  color: palegoldenrod;
+}
+
 
 .top-box-dot-line {
   border: 1px dashed black;

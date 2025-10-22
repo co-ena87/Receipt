@@ -9,5 +9,22 @@ resite.addEventListener('click', clicknext);
 
 //별점 스코어
 
-const staricons = document.getElementById('#star-icons i');
-console.log('staricons')
+const stars = document.querySelectorAll('#star-icons i');
+let rating = 0;
+
+function setRating(n) {
+    rating = n;
+    stars.forEach((elm, i ) => {
+        elm.classList.toggle('active', i < n)
+    });
+};
+    stars.forEach((elm , idx) => {
+        // 마우스클릭
+        elm.addEventListener('click', () => setRating(idx + 1));
+    
+    });
+
+
+
+
+
