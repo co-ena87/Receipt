@@ -42,13 +42,27 @@ body {
   pointer-events: none;
 }
 
-#new-resite i{
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 40px; /* 벽에서 여유 */
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  border-left: 1px solid black;
+}
+
+/* #new-resite i{
   position: absolute;
   font-size: 40px;
   z-index: 4;
   top:2%;
   right: 800px;
-}
+} */
 
 /*  영수증 css*/
 .resite-form {
@@ -79,12 +93,12 @@ body {
   font-style: normal;
   font-variation-settings: "BLED" 33, "SCAN" -7;
   margin-top: 60px;
-  margin-left:5px;
+  margin-left: 5px;
   margin-bottom: 10px;
   font-size: 40px;
 }
 
-#date{
+#date {
   font-family: "Workbench", sans-serif;
   font-optical-sizing: 80px;
   font-weight: 400;
@@ -137,14 +151,14 @@ body {
 
 #star-icons i {
   margin-top: 19px;
-  margin-left:5px;
+  margin-left: 5px;
   color: "";
   cursor: pointer;
-  user-select: none;  
+  user-select: none;
   transition: color 0.01s ease;
 }
 
-#star-icons i.active{
+#star-icons i.active {
   color: palegoldenrod;
 }
 
@@ -153,10 +167,8 @@ body {
   width: 300px;
   margin-top: 40px;
   margin-bottom: 60px;
-
 }
 /* top-box end*/
-
 
 .user-review p {
   text-align: justify;
@@ -166,7 +178,6 @@ body {
   font-weight: 600;
   font-size: 18px;
   font-style: normal;
-  
 }
 
 /* last box css*/
@@ -183,7 +194,6 @@ body {
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
-  
 }
 
 #watcha-pedia {
@@ -204,8 +214,6 @@ body {
   margin-bottom: 50px;
   pointer-events: none;
 }
-
-
 
 .cast-character span {
   margin-left: 50px;
@@ -274,10 +282,10 @@ body {
   width: 300px;
   margin-left: 40px;
   margin-top: 60px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
-.act-form-dot-line--end{
+.act-form-dot-line--end {
   /* tag 박스 점선 마지막 라인 */
   border: 1px dashed black;
   width: 300px;
@@ -285,8 +293,7 @@ body {
   margin-left: 40px;
 }
 
-
-#share{
+#share {
   font-family: "Rubik Distressed", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -300,9 +307,9 @@ body {
   margin-left: 40px;
   margin-bottom: 70px;
   margin-top: 20px;
-} 
+}
 
-#people-tag div{
+#people-tag div {
   font-family: "Doto", sans-serif;
   font-size: 25px;
   font-weight: 800;
@@ -313,8 +320,7 @@ body {
   margin-bottom: 10px;
 }
 
-
-#people-tag span{
+#people-tag span {
   font-family: "Diphylleia", serif;
   font-size: 18px;
   font-style: italic;
@@ -322,11 +328,8 @@ body {
   margin-right: -33px;
 }
 
-.bar-cod img{
-  margin-top:400px;
+.bar-cod img {
+  margin-top: 400px;
   width: 100%;
   pointer-events: none;
-  
 }
-
-
