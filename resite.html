@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resite</title>
+    <title>PreViewer</title>
 </head>
 
 <style>
@@ -49,45 +49,39 @@
     </div>
 
 
-
-    <div class='index-layout'>
+    <!--네비게이션 바-->
+    <div class='nav-bar-box'>
         <nav class='nav-bar'>
             <ul>
-                <li>
-                    <div class='index-block'>
-                        <a href=''>Log-in</a>
-                    </div>
-                </li>
+                <div id='nav-bar-text'>
+                    <li>
+                        <a href='./login.html'>Log-in</a>
+                    </li>
+                    <div class='nav-bar-a-line'></div>
 
-                <li>
-                    <div class='index-block'>
-                        <a href=''>PreViewer</a>
-                    </div>
-                </li>
+                    <li>
+                        <a href='./resite.html'>PreViewer</a>
+                    </li>
 
-                <li>
-                    <div class='index-block'>
+                    <li>
                         <a href=''>Publish</a>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class='index-block'>
+                    <li>
                         <a href=''>Fied</a>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class='index-block'>
+                    <li>
                         <a href=''>Set-Up</a>
-                    </div>
-                </li>
 
-                <li>
-                    <div class='index-block'>
+                    </li>
+
+                    <div class='nav-bar-a-line'></div>
+                    <li>
                         <a href=''>Log-Out</a>
-                    </div>
-                </li>
+                    </li>
+                </div>
+
 
             </ul>
         </nav>
@@ -95,19 +89,7 @@
 
 
 
-
-    <!--작성페이지로 이동 하는 아이콘-->
-    <!-- <div id="new-resite">
-        <button id="new-res-go"><i class="fa-solid fa-pen-fancy"></i></button>
-    </div> -->
-
-
-
-
-
     <!--메인 영수증-->
-
-
     <div class="resite-form">
         <div class="top-box">
             <div id="logo">resite</div>
@@ -123,13 +105,18 @@
                 <div id="dir-name">이창동</div>
             </div>
 
-            <!--아이콘 점수판-->
+            <!--별점 아이콘-->
             <div id="star-icons">
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
+            </div>
+
+            <!--별점 판-->
+            <div class='star-icons-value'>
+                <div>점수</div>
             </div>
 
             <div class="top-box-dot-line"></div>
@@ -223,7 +210,7 @@
 
 </body>
 <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
-<script src="js/resite.js"></script>
+
 
 
 </html>
