@@ -115,8 +115,8 @@
             </div>
 
             <!--별점 판-->
-            <div class='star-icons-value'>
-                <div>점수</div>
+            <div class='socre-show-box'>
+                평점: <span id='user-score'> 0</span>
             </div>
 
             <div class="top-box-dot-line"></div>
@@ -143,6 +143,8 @@
         <div class="last-box">
             <img id="watcha-qr" src="img/watcha.png">
 
+
+            <!--다른 사이트로 공유하기-->
             <div id="share">Share</div>
             <div class="sharing-thing">
                 <i class="fa-brands fa-instagram fa-2x"></i>
@@ -179,8 +181,25 @@
                     <div class="character-card">
                         <div>이신애 역</div>
                         <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
+
+                        <!--아이콘 모달 -->
+                        <dialog open class='character-icon-modal'>
+                            <div class='icons-op'>
+                                <i class="fa-regular fa-face-laugh-wink"></i>
+                                <i class="fa-regular fa-face-meh"></i>
+                                <i class="fa-regular fa-face-tired"></i>
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </div>
+                            <form method="dialog">
+                                <button id='moadl-close'>❌</button>
+                            </form>
+
+                        </dialog>
+
                         <div>김종찬 역</div>
                         <i class="fa-regular fa-face-tired fa-2x"></i>
+
+
                         <div>박도섭 역</div>
                         <i class="fa-regular fa-face-meh fa-2x"></i>
                     </div>
@@ -210,6 +229,7 @@
 
 </body>
 <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+<script src='./js/resite.js'></script>
 
 
 
