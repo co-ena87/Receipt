@@ -1,6 +1,10 @@
 @import "reset.css";
 @import "login.css";
-@import "resite.css";
 @import "edit.css";
 
+@import "preview.css";
 
+/* components css */
+@import "./components/part-one.css";
+@import "./components/part-one.css";
+@import "./components/navBar.css";

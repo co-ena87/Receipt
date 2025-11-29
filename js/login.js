@@ -1,6 +1,6 @@
 const loginbtn =document.getElementById('login_btn');
 
 onClick = () => {
-    window.location.href = 'resite.html'
+    window.location.href = 'preview.html'
 };
 loginbtn.addEventListener('click', onClick);

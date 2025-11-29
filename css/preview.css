@@ -42,42 +42,10 @@ body {
   pointer-events: none;
 }
 
-/* nav 바 CSS*/
 
-.nav-bar-box {
-  z-index: 4;
-  height: 420px;
-  width: 120px;
-  background-color: whitesmoke;
-  border: 2px solid black;
-  border-radius: 8px;
-  position: fixed;
-  top: 300px;
-  right: 275px;
-}
-
-.nav-bar a {
-  font-family: "Sedgwick Ave", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
-
-#nav-bar-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.nav-bar-a-line {
-  border: 2px solid black;
-  width: 80px;
-}
 
 /*  영수증 css*/
-.resite-form {
+.receipt-form {
   position: relative;
   width: 400px;
   height: 400vh;
@@ -88,113 +56,10 @@ body {
   margin-top: -230px;
 }
 
-.top-box {
-  display: flex;
-  position: relative;
-  width: 400px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
 
-#logo {
-  font-family: "Workbench", sans-serif;
-  font-optical-sizing: 80px;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "BLED" 33, "SCAN" -7;
-  margin-top: 60px;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  font-size: 40px;
-}
 
-#date {
-  font-family: "Workbench", sans-serif;
-  font-optical-sizing: 80px;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "BLED" 33, "SCAN" -7;
-  margin-top: 20px;
-  margin-right: -230px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
 
-.logo-dot-line {
-  border: 1px dashed black;
-  width: 360px;
-  margin: 3px;
-}
-
-#movie {
-  font-family: "Doto", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings: "ROND" 63;
-  margin-left: -20px;
-  margin-top: 50px;
-}
-
-#movie-title {
-  font-family: "Diphylleia", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-#director {
-  margin-top: 30px;
-  font-size: 23px;
-  font-family: "Sancreek", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-#dir-name {
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-bottom: 30px;
-  font-size: 23px;
-  font-weight: lighter;
-  font-style: italic;
-}
-
-#star-icons i {
-  margin-top: 40px;
-  margin-left: 5px;
-  color: "";
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.01s ease;
-}
-
-#star-icons i.active {
-  color: palegoldenrod;
-}
-
-.socre-show-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 80px;
-  margin-top: 100px;
-  border: 2px dashed black;
-  border-radius: 3px;
-  font-family: "Diphylleia", serif;
-  font-size: 18px;
-}
-
-.top-box-dot-line {
-  border: 1px dashed black;
-  width: 340px;
-  margin-top: 100px;
-  margin-bottom: 80px;
-}
-/* top-box end*/
-
+/*part-two */
 .user-review p {
   text-align: justify;
   text-indent: 1em;
@@ -205,8 +70,7 @@ body {
   font-style: normal;
 }
 
-/* last box css*/
-
+/* part-three css*/
 .user-review div {
   margin-top: 20px;
   margin-left: 20px;
@@ -253,6 +117,14 @@ body {
   margin-bottom: 5px;
 }
 
+#actor-inform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2열을 동일한 너비로 나눔 */
+  gap: 20px;
+  justify-content: center;
+}
+
 .actor-card {
   display: flex;
   flex-direction: column;
@@ -282,6 +154,9 @@ body {
   font-family: "Diphylleia", serif;
   font-size: 18px;
   position: relative;
+  /* width: 200px;
+  height: 560px;
+  border: 1px solid greenyellow; */
 }
 
 .character-card i {
@@ -293,14 +168,6 @@ body {
   margin-top: 29px;
   margin-bottom: 80px;
   margin-left: -50px;
-}
-
-#actor-inform-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* 2열을 동일한 너비로 나눔 */
-  gap: 20px;
-  justify-content: center;
 }
 
 .character-icon-modal {
@@ -328,7 +195,8 @@ body {
   left: 22px;
   top: -18px;
 }
-/* 모달기본 스타일 리셋 */
+
+/* 모달 기본 css 리셋 */
 .character-icon-modal i {
   margin: 0;
   font-size: 25px;

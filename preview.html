@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreView</title>
+</head>
+
+<style>
+    @import "css/components/part-one.css";
+    @import "css/components/dot-line.css";
+    @import "css/components/navBar.css";
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Sancreek&family=Stardos+Stencil:wght@400;700&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Stardos+Stencil&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap');
+</style>
+
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/preview.css" rel="stylesheet" />
+
+<body>
+    <!-- 배경 이미지-->
+    <div class="backImg">
+        <img id="base-img" src="img/background.jpg">
+        <img id="noise-img" src="img/noise.jpg">
+    </div>
+
+    <!--네비게이션 바-->
+    <div class='nav-bar-box'>
+        <nav class='nav-bar'>
+            <ul>
+                <div id='nav-bar-text'>
+                    <li>
+                        <a href='./login.html'>Log-in</a>
+                    </li>
+                    <div class='nav-bar-a-line'></div>
+
+                    <li>
+                        <a href='./preview.html'>PreView</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Publish</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Fied</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Set-Up</a>
+
+                    </li>
+
+                    <div class='nav-bar-a-line'></div>
+                    <li>
+                        <a href=''>Log-Out</a>
+                    </li>
+                </div>
+
+
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <!--메인 영수증-->
+    <div class="receipt-form">
+        <div class="part-one">
+            <div class="big-title">resite</div>
+            <div id="date">2025.09.12</div>
+            <!-- ----- 영수증 구분선-->
+            <div class="logo-dot-line"></div>
+            <div class="logo-dot-line"></div>
+            <!-- ----- 영수증 구분선-->
+
+            <div class="movie-title-box">Movie Title :
+                <span id="movie-title-text">밀양</span>
+            </div>
+
+            <div class="director">Movie Director
+                <div id="dir-name">이창동</div>
+            </div>
+
+            <!--별점 아이콘-->
+            <div id="star-icons">
+                <span><i class="fa-solid fa-star fa-2x"></i></span>
+                <span><i class="fa-solid fa-star fa-2x"></i></span>
+                <span><i class="fa-solid fa-star fa-2x"></i></span>
+                <span><i class="fa-solid fa-star fa-2x"></i></span>
+                <span><i class="fa-solid fa-star fa-2x"></i></span>
+            </div>
+
+            <!--별점 스코어-->
+            <div class='socre-show-box'>
+                평점: <span id='user-score'> 0</span>
+            </div>
+            <!-- ----- 영수증 구분선-->
+            <div class="double-box-dot-line"></div>
+            <!-- ----- 영수증 구분선-->
+        </div>
+
+        <div class="part-two">
+            <div class="user-review">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non adipisci neque vitae. Esse
+                        quam rem fugit dignissimos ullam quisquam natus earum architecto laboriosam, maiores beatae.
+                        Officia rem minus eius voluptate ea. Maxime unde recusandae, tempora ipsum quae odit explicabo
+                        suscipit modi libero! Hic reiciendis impedit numquam maiores. Vitae quos at modi alias molestias
+                        temporibus. Facere molestias, aperiam distinctio rerum tempora sit nulla dolore accusantium quis
+                        modi magni pariatur nostrum dignissimos possimus. Unde quisquam, adipisci veritatis beatae
+                        soluta dolorum laboriosam distinctio perspiciatis! Quod dicta quos fugit atque cupiditate eum
+                        temporibus dolore doloribus eius, facere officiis necessitatibus aliquid voluptatem obcaecati
+                        iusto?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="part-three">
+            <!--index 박스 절취선-->
+            <div class="index-box">
+                <div class="cast-character">
+                    <span>cast</span>
+                    <span>character</span>
+                </div>
+                <div class="act-form-dot-line"></div>
+            </div>
+
+            <div id="watcha-pedia"> Watcha-Pedia</div>
+            <img id="watcha-qr" src="img/watcha.png">
+
+            <!--다른 사이트로 공유하기-->
+            <div id="share">Share</div>
+            <div class="sharing-thing">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+                <i class="fa-brands fa-reddit fa-2x"></i>
+                <i class="fa-solid fa-blog fa-2x"></i>
+                <i class="fa-brands fa-google fa-2x"></i>
+                <i class="fa-brands fa-facebook fa-2x"></i>
+            </div>
+
+
+            <div class="act-form-dot-line"></div>
+            <!--index 박스 절취선-->
+
+            <div id="actor-inform-grid">
+                <div class="actor-card">
+                    <div class="actor-name">전도연</div>
+                    <img src="img/wjsehdus.jpeg">
+
+                    <div class="actor-name">송강호</div>
+                    <img src="img/thdrkdgh.jpeg">
+
+                    <div class="actor-name">조영진</div>
+                    <img src="img/whdudwls.jpeg">
+                </div>
+
+                <div class="character-list">
+                    <div class="character-card">
+                        <div>이신애 역</div>
+                        <div id='character-face-box' class='face-display'>
+                            <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
+                        </div>
+
+
+                        <div>김종찬 역</div>
+                        <i class="fa-regular fa-face-tired fa-2x"></i>
+
+
+                        <div>박도섭 역</div>
+                        <i class="fa-regular fa-face-meh fa-2x"></i>
+                    </div>
+                </div>
+
+            </div>
+            <!--아이콘 모달 -->
+            <dialog open class='character-icon-modal'>
+                <div class='icons-op'>
+                    <i class="fa-regular fa-face-laugh-wink"></i>
+                    <i class="fa-regular fa-face-meh"></i>
+                    <i class="fa-regular fa-face-tired"></i>
+                    <i class="fa-solid fa-ban"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <form method="dialog">
+                    <button>확인</button>
+                </form>
+            </dialog>
+
+            <div class="act-form-dot-line-end"></div>
+            <div id="people-tag">
+                <div>Tag</div>
+                <span>#전도연</span>
+                <span>#송강호</span>
+                <span>#조영진</span>
+                <span>#이창동</span>
+            </div>
+            <div class="act-form-dot-line--end"></div>
+        </div>
+
+        <div class="bar-cod">
+            <img src="img/barcod.jpg">
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+<script src='./js/previes.js'></script>
+
+
+
+</html>

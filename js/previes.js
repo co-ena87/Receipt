@@ -1,5 +1,4 @@
 //별점 스코어
-
 const stars = document.querySelectorAll("#star-icons i");
 const userScore = document.getElementById("user-score");
 let rating = 0;
@@ -20,3 +19,7 @@ stars.forEach((elm, idx) => {
 });
 
 console.log(userScore);
+
+//아이콘 모달 이벤트
+
+//얼굴 이모지 클릭 이벤트

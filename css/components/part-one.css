@@ -1,0 +1,114 @@
+/* part-one font-list */
+    /*logo font*/
+    @import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+
+    /*movie font*/
+    @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+
+    /*movie-title font*/
+    /*socre-show-box font*/
+    @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+
+    /*dir-name font (감독)*/
+    @import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
+
+
+
+.part-one {
+  display: flex;
+  position: relative;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.big-title {
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: 80px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 33, "SCAN" -7;
+  margin-top: 60px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+#date {
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: 80px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 33, "SCAN" -7;
+  margin-top: 20px;
+  margin-right: -230px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.logo-dot-line {
+  border: 1px dashed black;
+  width: 360px;
+  margin: 3px;
+}
+
+.movie-title-box {
+  font-family: "Doto", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  font-variation-settings: "ROND" 63;
+  margin-left: -20px;
+  margin-top: 50px;
+}
+
+#movie-title-text {
+  font-family: "Diphylleia", serif;
+  font-weight: 800;
+}
+
+.director {
+  margin-top: 30px;
+  font-size: 23px;
+  font-family: "Sancreek", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+#dir-name {
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  font-size: 23px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+#star-icons i {
+  margin-top: 40px;
+  margin-left: 5px;
+  color: "";
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.01s ease;
+}
+
+#star-icons i.active {
+  color: palegoldenrod;
+}
+
+.socre-show-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 80px;
+  margin-top: 100px;
+  border: 2px dashed black;
+  border-radius: 3px;
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+}
+
+
