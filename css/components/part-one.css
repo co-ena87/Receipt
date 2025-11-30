@@ -1,18 +1,16 @@
-/* part-one font-list */
-    /*logo font*/
-    @import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+/* part-one 폰트 */
+/*logo font*/
+@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
 
-    /*movie font*/
-    @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+/*movie font*/
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
 
-    /*movie-title font*/
-    /*socre-show-box font*/
-    @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+/*movie-title font*/
+/*socre-show-box font*/
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
 
-    /*dir-name font (감독)*/
-    @import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
-
-
+/*dir-name font (감독)*/
+@import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
 
 .part-one {
   display: flex;
@@ -84,31 +82,3 @@
   font-weight: lighter;
   font-style: italic;
 }
-
-#star-icons i {
-  margin-top: 40px;
-  margin-left: 5px;
-  color: "";
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.01s ease;
-}
-
-#star-icons i.active {
-  color: palegoldenrod;
-}
-
-.socre-show-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 80px;
-  margin-top: 100px;
-  border: 2px dashed black;
-  border-radius: 3px;
-  font-family: "Diphylleia", serif;
-  font-size: 18px;
-}
-
-

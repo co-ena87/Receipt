@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&family=Stardos+Stencil&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap");
+
+/* part-three css*/
+.cast-character-box {
+  font-family: "Special Elite", system-ui;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+}
+.cast-character-list span {
+  margin-left: 50px;
+  margin-right: 5px;
+}
+
+.cast-character-line {
+  border: 1px dashed black;
+  width: 300px;
+  margin-left: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.actor-card-one,
+.actor-card-two,
+.actor-card-three {
+  display: flex;
+}
+
+.actor-card-one div,
+.actor-card-two div,
+.actor-card-three div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  margin-right: 12px;
+}
+
+.actor-name {
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+}
+
+.character-name {
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.actor-card-click {
+  margin-left: 45px;
+}

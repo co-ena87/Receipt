@@ -1,0 +1,55 @@
+/* 모달 기본 css 리셋 */
+.character-icon-modal i {
+  margin: 0;
+  font-size: 25px;
+  display: block;
+}
+.character-icon-modal {
+  position: absolute;
+  z-index: 5;
+  left: 120px;
+  top: 28%;
+  height: 180px;
+  width: 55px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 14px;
+  transform: translateY(-50%);
+}
+
+.icons-op {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  left: 22px;
+  top: -18px;
+}
+/* 왼쪽 꼬리 테두리 */
+.character-icon-modal::before {
+  content: "";
+  position: absolute;
+  left: -16px; /* 박스 왼쪽으로 이동 */
+  top: 50%; /*말풍선 꼬리 위치*/
+  transform: translateY(-50%); /* 세로 가운데 맞추기 */
+
+  border-width: 10px 16px 10px 0;
+  border-style: solid;
+  border-color: transparent #111 transparent transparent;
+}
+
+/* 왼쪽 꼬리 내부 */
+.character-icon-modal::after {
+  content: "";
+  position: absolute;
+  left: -14px; /* 테두리보다 살짝 안쪽 */
+  top: 50%; /*말풍선 꼬리 위치*/
+  transform: translateY(-50%);
+  border-width: 8px 14px 8px 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}

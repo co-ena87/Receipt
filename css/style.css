@@ -1,10 +1,14 @@
 @import "reset.css";
 @import "login.css";
 @import "edit.css";
-
 @import "preview.css";
 
+/* layout css */
+@import "./components/part-one.css";
+@import "./components/part-two.css";
+@import "./components/part-three.css";
+
 /* components css */
-@import "./components/part-one.css";
-@import "./components/part-one.css";
 @import "./components/navBar.css";
+@import "./components/star-icons.css";
+@import "./components/click-modal.css";

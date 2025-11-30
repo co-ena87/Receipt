@@ -9,15 +9,12 @@
 
 <style>
     @import "css/components/part-one.css";
-    @import "css/components/dot-line.css";
+    @import "css/components/part-two.css";
+    @import "css/components/part-three.css";
     @import "css/components/navBar.css";
+    @import "css/components/star-icons.css";
+    @import "css/components/click-modal.css";
 
-
-    @import url('https://fonts.googleapis.com/css2?family=Sancreek&family=Stardos+Stencil:wght@400;700&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Stardos+Stencil&display=swap');
 
     @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
 
@@ -64,12 +61,11 @@
                     </li>
 
                     <div class='nav-bar-a-line'></div>
+
                     <li>
                         <a href=''>Log-Out</a>
                     </li>
                 </div>
-
-
             </ul>
         </nav>
     </div>
@@ -129,87 +125,81 @@
             </div>
         </div>
 
+
         <div class="part-three">
-            <!--index 박스 절취선-->
-            <div class="index-box">
-                <div class="cast-character">
+            <div class="cast-character-box">
+                <div class="cast-character-line"></div>
+                <div class="cast-character-list">
                     <span>cast</span>
                     <span>character</span>
+                    <span>?</span>
                 </div>
-                <div class="act-form-dot-line"></div>
+                <div class="cast-character-line"></div>
             </div>
 
-            <div id="watcha-pedia"> Watcha-Pedia</div>
-            <img id="watcha-qr" src="img/watcha.png">
-
-            <!--다른 사이트로 공유하기-->
-            <div id="share">Share</div>
-            <div class="sharing-thing">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-                <i class="fa-brands fa-reddit fa-2x"></i>
-                <i class="fa-solid fa-blog fa-2x"></i>
-                <i class="fa-brands fa-google fa-2x"></i>
-                <i class="fa-brands fa-facebook fa-2x"></i>
+            <div class='actor-card-one'>
+                <div class="actor-name">전도연</div>
+                <div class='character-name'>이신애 역</div>
+                <div class='actor-card-click'>
+                    <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
+                </div>
             </div>
 
-
-            <div class="act-form-dot-line"></div>
-            <!--index 박스 절취선-->
-
-            <div id="actor-inform-grid">
-                <div class="actor-card">
-                    <div class="actor-name">전도연</div>
-                    <img src="img/wjsehdus.jpeg">
-
-                    <div class="actor-name">송강호</div>
-                    <img src="img/thdrkdgh.jpeg">
-
-                    <div class="actor-name">조영진</div>
-                    <img src="img/whdudwls.jpeg">
+            <div class='actor-card-two'>
+                <div class="actor-name">송강호</div>
+                <div class='character-name'>김종찬 역</div>
+                <div class='actor-card-click'>
+                    <i class="fa-regular fa-face-tired fa-2x"></i>
                 </div>
-
-                <div class="character-list">
-                    <div class="character-card">
-                        <div>이신애 역</div>
-                        <div id='character-face-box' class='face-display'>
-                            <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
-                        </div>
-
-
-                        <div>김종찬 역</div>
-                        <i class="fa-regular fa-face-tired fa-2x"></i>
-
-
-                        <div>박도섭 역</div>
-                        <i class="fa-regular fa-face-meh fa-2x"></i>
-                    </div>
-                </div>
-
             </div>
-            <!--아이콘 모달 -->
-            <dialog open class='character-icon-modal'>
-                <div class='icons-op'>
-                    <i class="fa-regular fa-face-laugh-wink"></i>
-                    <i class="fa-regular fa-face-meh"></i>
-                    <i class="fa-regular fa-face-tired"></i>
-                    <i class="fa-solid fa-ban"></i>
-                    <i class="fa-regular fa-circle-xmark"></i>
-                </div>
-                <form method="dialog">
-                    <button>확인</button>
-                </form>
-            </dialog>
 
-            <div class="act-form-dot-line-end"></div>
-            <div id="people-tag">
-                <div>Tag</div>
-                <span>#전도연</span>
-                <span>#송강호</span>
-                <span>#조영진</span>
-                <span>#이창동</span>
+            <div class='actor-card-three'>
+                <div class="actor-name">조영진</div>
+                <div class='character-name'>박도섭 역</div>
+                <div class='actor-card-click'>
+                    <i class="fa-regular fa-face-meh fa-2x"></i>
+                </div>
             </div>
-            <div class="act-form-dot-line--end"></div>
         </div>
+        <div class="cast-character-line"></div>
+
+        <!--actor-card-click 모달 -->
+        <dialog open class='character-icon-modal'>
+            <div class='icons-op'>
+                <i class="fa-regular fa-face-laugh-wink"></i>
+                <i class="fa-regular fa-face-meh"></i>
+                <i class="fa-regular fa-face-tired"></i>
+                <i class="fa-solid fa-ban"></i>
+                <!-- <i class="fa-regular fa-circle-xmark"></i> -->
+            </div>
+            <form method="dialog">
+                <button>확인</button>
+            </form>
+        </dialog>
+
+        <div id="people-tag">
+            <div>Tag</div>
+            <span>#전도연</span>
+            <span>#송강호</span>
+            <span>#조영진</span>
+            <span>#이창동</span>
+        </div>
+        <div class="act-form-dot-line--end"></div>
+
+        <!--다른 사이트로 공유하기-->
+        <div id="share">Share</div>
+        <div class="sharing-thing">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            <i class="fa-brands fa-reddit fa-2x"></i>
+            <i class="fa-solid fa-blog fa-2x"></i>
+            <i class="fa-brands fa-google fa-2x"></i>
+            <i class="fa-brands fa-facebook fa-2x"></i>
+        </div>
+
+        <div id="watcha-pedia"> Watcha-Pedia</div>
+        <img id="watcha-qr" src="img/watcha.png">
+
+
 
         <div class="bar-cod">
             <img src="img/barcod.jpg">
@@ -219,7 +209,6 @@
 
 
 
-    </div>
 
 </body>
 <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
