@@ -20,6 +20,12 @@ stars.forEach((elm, idx) => {
 
 console.log(userScore);
 
-//아이콘 모달 이벤트
+//얼굴 아이콘 클릭 이벤트
+const iconclick = document.getElementsByClassName("actor-card-click");
+const chariconModal = document.querySelector("dialog");
 
-//얼굴 이모지 클릭 이벤트
+for (const icon of iconclick) {
+  icon.addEventListener("click", () => {
+    chariconModal.showModal();
+  });
+}
