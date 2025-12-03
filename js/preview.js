@@ -18,14 +18,19 @@ stars.forEach((elm, idx) => {
   elm.addEventListener("click", () => setRating(idx + 1));
 });
 
-console.log(userScore);
-
-//얼굴 아이콘 클릭 이벤트
+//배우 아이콘 클릭시 모달 띄우기
 const iconclick = document.getElementsByClassName("actor-card-click");
 const chariconModal = document.querySelector("dialog");
 
-for (const icon of iconclick) {
+[...iconclick].forEach((icon) => {
   icon.addEventListener("click", () => {
     chariconModal.showModal();
   });
-}
+});
+
+const modaInclick = document.querySelectorAll(".icons-op i");
+[...modaInclick].forEach((icon) => {
+  icon.addEventListener("click", () => {
+    console.log("클릭됨");
+  });
+});
