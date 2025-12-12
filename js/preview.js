@@ -19,19 +19,57 @@ stars.forEach((elm, idx) => {
 });
 
 //클릭이벤트
-const iconclick = document.querySelectorAll(".actor-card-click");
+
 const chariconModal = document.querySelector("dialog");
 
-iconclick.forEach((icon, idx) => {
+let nowicon = ""; // actor-card 의 처음 기본값이 담긴 변수
+let moadlicon = ""; // modalicon안에 아이콘 클릭시 정보
+
+const iconclick = document.querySelectorAll(".actor-card-click");
+iconclick.forEach((icon) => {
   icon.addEventListener("click", () => {
-    console.log(`${idx}번째 카드 클릭`);
+    const iconEl = icon.querySelector("i");
+    const iconType = icon.dataset.icon;
+    const clickdIndex = Number(icon.dataset.index);
+    nowicon = icon;
+
+    nowicon = {
+      index: clickdIndex,
+      iconEl: nowicon,
+      iconType: iconType,
+      iconClass: iconTarget,
+    };
+
     chariconModal.showModal();
   });
 });
 
 const modaInclick = document.querySelectorAll(".icons-op i");
-[...modaInclick].forEach((icon) => {
+modaInclick.forEach((icon) => {
   icon.addEventListener("click", () => {
-    console.log("클릭감지");
+    const modaltTarget = icon.querySelector("i");
+    const iconEl = icon.querySelector("i");
+    const modalType = icon.dataset.icon;
+    const clickdIndex = Number(icon.dataset.index);
+    moadlicon = icon;
+
+    moadlicon = {
+      index: clickdIndex,
+      iconEl: iconEl,
+      modalType: modalType,
+      modalClass: modaltTarget,
+    };
+
+    if (!nowicon) {
+      alert("아이콘을 선택해주세요!");
+      return;
+    }
+    const newIconClass = moadlicon.modalType;
+    const newIconType = moadlicon.modaltTarget;
+
+    nowicon.iconType = newIconType;
+    nowicon.iconClass = newIconClass;
+
+    nowicon.iconEl.Clas;
   });
 });
