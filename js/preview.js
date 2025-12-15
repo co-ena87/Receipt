@@ -26,50 +26,51 @@ let nowicon = ""; // actor-card 의 처음 기본값이 담긴 변수
 let moadlicon = ""; // modalicon안에 아이콘 클릭시 정보
 
 const iconclick = document.querySelectorAll(".actor-card-click");
-iconclick.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    const iconEl = icon.querySelector("i");
-    const iconType = icon.dataset.icon;
-    const clickdIndex = Number(icon.dataset.index);
-    nowicon = icon;
+iconclick.forEach((card) => {
+  card.addEventListener("click", () => {
+    const cardEl = card.querySelector("i");
 
     nowicon = {
-      index: clickdIndex,
-      iconEl: nowicon,
-      iconType: iconType,
-      iconClass: iconTarget,
+      cardEl: card, //카드 div
+      index: Number(card.dataset.index), // 카드순서
+      iconEl: cardEl, // i태그
+      iconType: card.dataset.icon, // i 어떤 표정인지
+      iconClass: cardEl.className, // 현재 클라스이름
     };
 
+    console.log("현재 카드 아이콘:", nowicon);
     chariconModal.showModal();
   });
 });
 
 const modaInclick = document.querySelectorAll(".icons-op i");
-modaInclick.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    const modaltTarget = icon.querySelector("i");
-    const iconEl = icon.querySelector("i");
-    const modalType = icon.dataset.icon;
-    const clickdIndex = Number(icon.dataset.index);
-    moadlicon = icon;
+modaInclick.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (!event.target.matches("i")) return;
+    if (!nowicon) {
+      alert("배우 아이콘 선택해주세요.");
+    }
+
+    const modalEl = event.target;
 
     moadlicon = {
-      index: clickdIndex,
-      iconEl: iconEl,
-      modalType: modalType,
-      modalClass: modaltTarget,
+      modadEl: modal, //카드 div
+      iconType: modal.dataset.icon, // i 어떤 표정인지
+      iconClass: modalEl.className, // 현재 클라스이름
     };
 
-    if (!nowicon) {
-      alert("아이콘을 선택해주세요!");
-      return;
-    }
-    const newIconClass = moadlicon.modalType;
-    const newIconType = moadlicon.modaltTarget;
+    console.log("현재 모달 아이콘:", moadlicon);
 
-    nowicon.iconType = newIconType;
-    nowicon.iconClass = newIconClass;
+    //카드의 i를 모달에서 고른 아이콘으로 교체
+    // 카드 쪽에 fa-2x 유지
+    nowicon.iconEl.className = `${moadlicon.iconClass} fa-2x`;
 
-    nowicon.iconEl.Clas;
+    // moadl 아이콘 선택 후 nowicon iconType 프로퍼티 변경 적용
+    nowicon.cardEl.dataset.icon = moadlicon.iconType;
+
+    nowicon.iconType = moadlicon.iconType;
+    nowicon.iconClass = nowicon.iconEl.className;
+
+    chariconModal.close();
   });
 });
