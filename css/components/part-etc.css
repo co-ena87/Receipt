@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+/* 'Tag'적용 폰트 */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+/* 'share' 적용폰트 */
+
+.move-tag-title {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
+  font-size: 25px;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.move-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.move-tag-list div {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 17px;
+  padding: 2px;
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.share {
+  font-family: "Rubik 80s Fade", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  margin-left: 40px;
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+.sharing-thing i {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.watcha-pedia {
+  font-family: "Maiden Orange", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 40px;
+  font-size: 23px;
+}
+
+.share-line {
+  border-style: dotted black;
+
+  width: 300px;
+}
+.bar-cod img {
+  margin-top: 120px;
+  width: 100%;
+  pointer-events: none;
+}

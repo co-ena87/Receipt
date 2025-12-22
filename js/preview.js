@@ -38,7 +38,6 @@ iconclick.forEach((card) => {
       iconClass: cardEl.className, // 현재 클라스이름
     };
 
-    console.log("현재 카드 아이콘:", nowicon);
     chariconModal.showModal();
   });
 });
@@ -58,8 +57,6 @@ modaInclick.forEach((modal) => {
       iconType: modal.dataset.icon, // i 어떤 표정인지
       iconClass: modalEl.className, // 현재 클라스이름
     };
-
-    console.log("현재 모달 아이콘:", moadlicon);
 
     //카드의 i를 모달에서 고른 아이콘으로 교체
     // 카드 쪽에 fa-2x 유지

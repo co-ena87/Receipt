@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap");
 
 /* part-three css*/
+
+.part-three {
+  margin-bottom: 60px;
+}
+
 .cast-character-box {
   font-family: "Special Elite", system-ui;
   font-weight: 300;
@@ -14,17 +19,18 @@
 }
 
 .cast-character-line {
-  border: 1px dashed black;
+  border: 2px dashed black;
   width: 300px;
   margin-left: 40px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .actor-card-one,
 .actor-card-two,
 .actor-card-three {
   display: flex;
+  margin-top: 30px;
 }
 
 .actor-card-one div,

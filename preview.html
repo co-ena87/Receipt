@@ -14,17 +14,19 @@
     @import "css/components/navBar.css";
     @import "css/components/star-icons.css";
     @import "css/components/click-modal.css";
+    @import "./css/components/part-etc.css";
 
 
-    @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
-
+    /* 왓챠피디아 폰트 */
     @import url('https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap');
+
+    /* 애니메이션 css */
+    @import "css/animations/attention.css";
 </style>
 
 <link href="css/style.css" rel="stylesheet" />
 <link href="css/preview.css" rel="stylesheet" />
+<link href="css/animations/attention.css" rel="stylesheet" />
 
 <body>
     <!-- 배경 이미지-->
@@ -162,7 +164,6 @@
                 </div>
             </div>
         </div>
-        <div class="cast-character-line"></div>
 
         <!--actor-card-click 모달 -->
         <dialog class='character-icon-modal'>
@@ -172,43 +173,73 @@
                 <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
                 <i class="fa-solid fa-ban data-icon=" data-icon="i-null"></i>
             </div>
-            <form method=" dialog">
-                <button class='closebtn'>Close</button>
-            </form>
         </dialog>
 
-        <div id="people-tag">
-            <div>Tag</div>
-            <span>#전도연</span>
-            <span>#송강호</span>
-            <span>#조영진</span>
-            <span>#이창동</span>
+        <div class="modal-outside-hint">
+            ESC 키를 누르면 닫힙니다
         </div>
-        <div class="act-form-dot-line--end"></div>
 
-        <!--다른 사이트로 공유하기-->
-        <div id="share">Share</div>
-        <div class="sharing-thing">
-            <i class="fa-brands fa-instagram fa-2x"></i>
-            <i class="fa-brands fa-reddit fa-2x"></i>
-            <i class="fa-solid fa-blog fa-2x"></i>
-            <i class="fa-brands fa-google fa-2x"></i>
-            <i class="fa-brands fa-facebook fa-2x"></i>
+        <div class='part-etc'>
+
+            <div class="move-tag">
+                <div class="move-tag-title">Tag
+                    <span class=" tag-icon">
+                        <i class="fa-solid fa-tag fa-xl"></i>
+                    </span>
+                </div>
+
+                <div class='move-tag-list'>
+                    <div>#전도연</div>
+                    <div>#송강호</div>
+                    <div>#이창동</div>
+                    <div>#미스터리</div>
+                    <div>#한국</div>
+                    <div>#K-Movie</div>
+                    <div>#슬픈</div>
+                </div>
+            </div>
+
+            <!-- part-three.css 파일속 코드 -->
+            <div class="cast-character-line"></div>
+            <div class="cast-character-line"></div>
+
+
+
+
+            <!--다른 사이트로 공유하기-->
+            <div class="share">Share</div>
+            <div class="sharing-thing">
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+
+                <a href="https://www.reddit.com/">
+                    <i class="fa-brands fa-reddit fa-2x"></i>
+                </a>
+
+                <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0">
+                    <i class="fa-solid fa-blog fa-2x"></i>
+                </a>
+
+                <a href="www.google.co.kr">
+                    <i class="fa-brands fa-google fa-2x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/?locale=ko_KR">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+
+                <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia"> Watcha-Pedia</div>
+            </div>
+            <div class="share-line"></div>
+
+
+            <div class="bar-cod">
+                <img src="img/barcod.jpg">
+            </div>
+
+
         </div>
-    </div>
-
-    <div id="watcha-pedia"> Watcha-Pedia</div>
-    <img id="watcha-qr" src="img/watcha.png">
-
-
-
-    <div class="bar-cod">
-        <img src="img/barcod.jpg">
-    </div>
-
-    </div>
-
-
 
 
 </body>

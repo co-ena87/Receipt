@@ -1,16 +1,19 @@
-/* part-one 폰트 */
-/*logo font*/
-@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+/* part-one 폰트리스트 */
 
-/*movie font*/
+@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+/* 'resite' 적용폰트 */
+/* '날짜' 적용폰트 */
+
 @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
 
-/*movie-title font*/
-/*socre-show-box font*/
-@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+/* 'movie-title' 적용폰트 */
 
-/*dir-name font (감독)*/
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+/*'밀양' 적용폰트 */
+
 @import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
+/*'이창동' 적용폰트*/
+/* 'movie director' 적용폰트 */
 
 .part-one {
   display: flex;

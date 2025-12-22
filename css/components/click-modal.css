@@ -2,20 +2,10 @@
   font-size: 28px;
 }
 
-.closebtn {
-  font-size: 15px;
-  border-radius: 18%;
-  width: 55px;
-  height: 30px;
-  margin-top: 15px;
-  margin-left: -8px;
-  background-color: white;
-}
-
 .character-icon-modal {
   z-index: 5;
   width: 35px;
-  height: 180px;
+  height: 150px;
   border-radius: 14px;
 }
 
@@ -25,4 +15,20 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+.modal-outside-hint {
+  position: fixed;
+  top: 520px;
+  left: 670px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  color: salmon;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.character-icon-modal[open] + .modal-outside-hint {
+  opacity: 1;
 }

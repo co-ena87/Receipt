@@ -54,25 +54,6 @@ body {
   margin-top: -230px;
 }
 
-#watcha-pedia {
-  font-family: "Maiden Orange", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 70px;
-  margin-bottom: -50px;
-  font-size: 28px;
-}
-
-#watcha-qr {
-  width: 290px;
-  height: 290px;
-  padding-top: 20px;
-  margin-left: 45px;
-  margin-top: -120px;
-  margin-bottom: 50px;
-  pointer-events: none;
-}
-
 .act-form-dot-line-end {
   border: 1px dashed black;
   width: 300px;
@@ -87,45 +68,4 @@ body {
   width: 300px;
   margin-top: 10px;
   margin-left: 40px;
-}
-
-#share {
-  font-family: "Rubik Distressed", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-  margin-left: 45px;
-  margin-top: 40px;
-  margin-bottom: 12px;
-}
-
-.sharing-thing i {
-  margin-left: 40px;
-  margin-bottom: 70px;
-  margin-top: 20px;
-}
-
-#people-tag div {
-  font-family: "Doto", sans-serif;
-  font-size: 25px;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings: "ROND" 63;
-  font-size: 18px;
-  margin-left: 40px;
-  margin-bottom: 10px;
-}
-
-#people-tag span {
-  font-family: "Diphylleia", serif;
-  font-size: 18px;
-  font-style: italic;
-  margin-left: 40px;
-  margin-right: -33px;
-}
-
-.bar-cod img {
-  margin-top: 400px;
-  width: 100%;
-  pointer-events: none;
 }
