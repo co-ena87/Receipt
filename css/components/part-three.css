@@ -7,6 +7,47 @@
   margin-bottom: 60px;
 }
 
+.act-form-dot-line {
+  border: 1px dashed black;
+  width: 300px;
+  margin-left: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.actor-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.actor-name {
+  margin-left: 15px;
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Diphylleia", serif;
+  font-size: 18px;
+}
+
+.character-card i {
+  margin-top: -40px;
+  margin-left: -50px;
+}
+
+.character-card div {
+  margin-top: 29px;
+  margin-bottom: 80px;
+  margin-left: -50px;
+}
+
 .cast-character-box {
   font-family: "Special Elite", system-ui;
   font-weight: 300;

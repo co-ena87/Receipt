@@ -4,37 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW-Resite</title>
+    <title>Edit</title>
 </head>
 
 <style>
-    /*logo font*/
-    @import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+    @import "css/components/part-one.css";
+    @import "css/components/part-two.css";
+    @import "css/components/part-three.css";
+    @import "css/components/navBar.css";
+    @import "css/components/star-icons.css";
+    @import "css/components/click-modal.css";
+    @import "css/components/part-etc.css";
+    @import "css/components/modebtn.css";
 
-    /*movie font*/
-    @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
-
-    /*movie-title font*/
-    @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
-
-    /*dir-name font (감독)*/
-    @import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
-
-    @import url('https://fonts.googleapis.com/css2?family=Sancreek&family=Stardos+Stencil:wght@400;700&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Stardos+Stencil&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
-
+    /* 왓챠피디아 폰트 */
     @import url('https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap');
+
+    /* 애니메이션 css */
+    @import "css/animations/attention.css";
 </style>
 
 <link href="css/style.css" rel="stylesheet" />
-<link href="css/edit.css" rel="stylesheet" />
+<link href="css/animations/attention.css" rel="stylesheet" />
 
 <body>
     <!-- 배경 이미지-->
@@ -42,46 +33,88 @@
         <img id="base-img" src="img/background.jpg">
         <img id="noise-img" src="img/noise.jpg">
     </div>
-    <div id="new-resite">
-        <button id="new-res-go"><i class="fa-solid fa-pen-fancy"></i></button>
+
+    <!--네비게이션 바-->
+    <div class='nav-bar-box'>
+        <nav class='nav-bar'>
+            <ul>
+                <div id='nav-bar-text'>
+                    <li>
+                        <a href='./login.html'>Log-in</a>
+                    </li>
+                    <div class='nav-bar-a-line'></div>
+
+                    <li>
+                        <a href='./preview.html'>PreView</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Publish</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Fied</a>
+                    </li>
+
+                    <li>
+                        <a href=''>Set-Up</a>
+
+                    </li>
+
+                    <div class='nav-bar-a-line'></div>
+
+                    <li>
+                        <a href=''>Log-Out</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
     </div>
 
-    <!--메인 영수증 폼-->
 
-    <div class="resite-form">
-        <div class="top-box">
-            <div id="logo">resite</div>
-            <div id="date" data-field="date">2025.09.12</div>
 
-            <!--실제 화면  점선 2줄-->
+    <!--메인 영수증-->
+    <div class="receipt-form">
+        <div class="part-one">
+            <div class="big-title">resite</div>
+            <div class="date" data-key="writeData" contenteditable="true">
+                2025.09.12
+            </div>
+
+            <!-- ----- 영수증 구분선-->
             <div class="logo-dot-line"></div>
             <div class="logo-dot-line"></div>
+            <!-- ----- 영수증 구분선-->
 
-            <!--영화 제목 입력칸-->
-            <div id="movie" data-field="moveTitle">Movie Title :
-                <span id="movie-title">밀양</span>
+            <div class="movie-title-box">Movie Title :
+                <span id="movie-title-text" data-key="reviewMoveName" contenteditable="true">밀양</span>
             </div>
 
-            <!--영화 감독란-->
-            <div id="director">Movie Director
-                <div id="dir-name" data-field="dir-name">이창동</div>
+            <div class="director">Movie Director
+                <div id="dir-name" data-key="directorName" contenteditable="true">이창동</div>
             </div>
 
-            <!--아이콘 점수판-->
-            <div id="star-icons">
+            <!--별점 아이콘-->
+            <div id="star-icons" data-key="starScore">
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
             </div>
-            <div class="top-box-dot-line"></div>
 
+            <!--별점 스코어-->
+            <div class='socre-show-box'>
+                평점: <span id="user-score">0</span>
+            </div>
+            <!-- ----- 영수증 구분선-->
+            <div class="double-box-dot-line"></div>
+            <!-- ----- 영수증 구분선-->
         </div>
 
-        <div class="middle-box">
-            <div class="user-review">
-                <div>
+        <div class="part-two">
+            <div data-key="writeReview" class="user-review">
+                <div class="reviewText" contenteditable="true">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non adipisci neque vitae. Esse
                         quam rem fugit dignissimos ullam quisquam natus earum architecto laboriosam, maiores beatae.
                         Officia rem minus eius voluptate ea. Maxime unde recusandae, tempora ipsum quae odit explicabo
@@ -92,81 +125,148 @@
                         temporibus dolore doloribus eius, facere officiis necessitatibus aliquid voluptatem obcaecati
                         iusto?
                     </p>
-                    <div id="watcha-pedia"> Watcha-Pedia</div>
                 </div>
             </div>
         </div>
 
-        <div class="last-box">
-            <img id="watcha-qr" src="img/watcha.png">
 
-            <div id="share">Share</div>
-            <div class="sharing-thing">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-                <i class="fa-brands fa-reddit fa-2x"></i>
-                <i class="fa-solid fa-blog fa-2x"></i>
-                <i class="fa-brands fa-google fa-2x"></i>
-                <i class="fa-brands fa-facebook fa-2x"></i>
-            </div>
-
-            <!--index 박스 절취선-->
-            <div class="act-form-dot-line"></div>
-            <div class="index-box">
-                <div class="cast-character">
+        <div class="part-three">
+            <div class="cast-character-box">
+                <div class="cast-character-line"></div>
+                <div class="cast-character-list">
                     <span>cast</span>
                     <span>character</span>
+                    <span>?</span>
                 </div>
+
+                <div class="cast-character-line"></div>
             </div>
-            <div class="act-form-dot-line"></div>
-            <!--index 박스 절취선-->
 
-            <div id="actor-inform-grid">
-                <div class="actor-card">
-                    <div class="actor-name">전도연</div>
-                    <img src="img/wjsehdus.jpeg">
+            <!-- 배우카드  -->
+            <div class="actor-card-one" data-key="actorCardOne">
+                <div class="actor-name" data-key="actorNameOne" contenteditable="true">전도연</div>
+                <div class="character-name" data-key="chaNameOne" contenteditable="true">이신애 역</div>
 
-                    <div class="actor-name">송강호</div>
-                    <img src="img/thdrkdgh.jpeg">
-
-                    <div class="actor-name">조영진</div>
-                    <img src="img/whdudwls.jpeg">
-                </div>
-
-                <div class="character-list">
-                    <div class="character-card">
-                        <div>이신애 역</div>
-                        <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
-                        <div>김종찬 역</div>
-                        <i class="fa-regular fa-face-tired fa-2x"></i>
-                        <div>박도섭 역</div>
-                        <i class="fa-regular fa-face-meh fa-2x"></i>
-                    </div>
+                <div class="actor-card-click" data-icon="i-good" data-index="1">
+                    <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
                 </div>
             </div>
 
-            <div class="act-form-dot-line-end"></div>
-            <div id="people-tag">
-                <div>Tag</div>
-                <span>#전도연</span>
-                <span>#송강호</span>
-                <span>#조영진</span>
-                <span>#이창동</span>
+            <div class="actor-card-two" data-key="actorCardTwo">
+                <div class="actor-name" data-key="actorNameTwo" contenteditable="true">송강호</div>
+                <div class="character-name" data-key="chaNameTwo" contenteditable="true">김종찬 역</div>
+
+                <div class="actor-card-click" data-icon="i-bad" data-index="2">
+                    <i class="fa-regular fa-face-tired fa-2x"></i>
+                </div>
             </div>
-            <div class="act-form-dot-line--end"></div>
+
+
+            <div class="actor-card-three" data-key="actorCardThree">
+                <div class="actor-name" data-key="actorNameThree" contenteditable="true">조영진</div>
+                <div class="character-name" data-key="chaNameThree" contenteditable="true">박도섭 역</div>
+
+                <div class='actor-card-click' data-icon="i-soso" data-index="3">
+                    <i class="fa-regular fa-face-meh fa-2x"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="bar-cod">
-            <img src="img/barcod.jpg">
+        <!--actor-card-click 모달 -->
+        <dialog class="character-icon-modal">
+            <div class="icons-op" data-icon="actorCardIcons">
+                <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
+                <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
+                <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
+                <i class="fa-solid fa-ban data-icon=" data-icon="i-null"></i>
+            </div>
+        </dialog>
+
+        <div class="modal-outside-hint">
+            ESC 키를 누르면 닫힙니다
         </div>
 
-    </div>
+        <div class='part-etc'>
+
+            <div class="move-tag">
+                <div class="move-tag-title">Tag
+                    <span class=" tag-icon">
+                        <i class="fa-solid fa-tag fa-xl"></i>
+                    </span>
+                </div>
+
+                <div class="move-tag-list" contenteditable="true">
+                    <div>#전도연</div>
+                    <div>#송강호</div>
+                    <div>#이창동</div>
+                    <div>#미스터리</div>
+                    <div>#한국</div>
+                    <div>#K-Movie</div>
+                    <div>#슬픈</div>
+                </div>
+            </div>
+
+            <!-- part-three.css 파일속 코드 -->
+            <div class="cast-character-line"></div>
+            <div class="cast-character-line"></div>
 
 
 
-    </div>
 
+            <!--다른 사이트로 공유하기-->
+
+
+            <div class="sharing-thing">
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+
+                <a href="https://www.reddit.com/">
+                    <i class="fa-brands fa-reddit fa-2x"></i>
+                </a>
+
+                <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0">
+                    <i class="fa-solid fa-blog fa-2x"></i>
+                </a>
+
+                <a href="www.google.co.kr">
+                    <i class="fa-brands fa-google fa-2x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/?locale=ko_KR">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+
+                <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia"> Watcha-Pedia
+                </div>
+
+            </div>
+
+            <div class="modebtn">
+                <div class="editbtn">Edit
+                    <i class="fa-solid fa-pen-fancy fa-lg"></i>
+                </div>
+
+                <div class="savebtn">Save
+                    <i class="fa-solid fa-floppy-disk fa-lg"></i>
+                </div>
+            </div>
+
+
+
+
+            <div class="bar-cod">
+                <img src="img/barcod.jpg">
+            </div>
+
+
+        </div>
+
+
+        <script src='./js/edit.js'></script>
+        <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 </body>
-<script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
-<script src="js/resite.js"></script>
+
+
 
 </html>

@@ -1,6 +1,5 @@
 @import "reset.css";
 @import "login.css";
-@import "edit.css";
 @import "preview.css";
 
 /* layout css */
@@ -13,6 +12,7 @@
 @import "./components/navBar.css";
 @import "./components/star-icons.css";
 @import "./components/click-modal.css";
+@import "./components/modebtn.css";
 
 /* 애니메이션 css */
 @import "./animations/attention.css";

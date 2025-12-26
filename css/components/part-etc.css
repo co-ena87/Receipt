@@ -8,7 +8,6 @@
   font-family: "DotGothic16", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-style: normal;
   font-size: 25px;
   margin-left: 40px;
   margin-top: 30px;
@@ -59,11 +58,6 @@
   font-size: 23px;
 }
 
-.share-line {
-  border-style: dotted black;
-
-  width: 300px;
-}
 .bar-cod img {
   margin-top: 120px;
   width: 100%;
