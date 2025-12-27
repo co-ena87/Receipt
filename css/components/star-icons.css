@@ -1,4 +1,4 @@
-#star-icons i {
+.star-icons i {
   margin-top: 40px;
   margin-left: 5px;
   color: "";
@@ -7,7 +7,7 @@
   transition: color 0.01s ease;
 }
 
-#star-icons i.active {
+.star-icons i.active {
   color: palegoldenrod;
 }
 

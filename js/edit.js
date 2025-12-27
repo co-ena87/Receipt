@@ -18,7 +18,7 @@ stars.forEach((elm, idx) => {
   elm.addEventListener("click", () => setRating(idx + 1));
 });
 
-//클릭이벤트
+//배우, 모달 아이콘 클릭 이벤트
 
 const chariconModal = document.querySelector("dialog");
 
@@ -72,4 +72,45 @@ modaInclick.forEach((modal) => {
   });
 });
 
-// edit.js 저장버튼
+// 로컬스토리지 키
+const STORAGE_KEY = "resite:edit";
+
+//저장 버튼
+const SaveBtn = document.querySelector(".savebtn");
+const EditBtn = document.querySelector(".editbtn");
+const editableElements = document.querySelectorAll("[contenteditable]");
+
+//edit.html 처음 방문시 바로 편집 막기 코드
+editableElements.forEach((el) => {
+  el.setAttribute("contenteditable", "false");
+  console.log("편집막힘");
+});
+
+// edit 버튼 클릭시 편집가능 코드
+EditBtn.addEventListener("click", () => {
+  editableElements.forEach((el) => {
+    el.setAttribute("contenteditable", "true");
+  });
+  console.log("편집 모드 작동");
+});
+
+//저장 이벤트
+SaveBtn.addEventListener("click", () => {
+  const editableElements = document.querySelectorAll("[data-key]");
+  const saveData = {};
+
+  editableElements.forEach((el) => {
+    const key = el.dataset.key;
+    const value = el.textContent.trim();
+    saveData[key] = value;
+  });
+
+  //로컬스토리지 저장
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
+  console.log("저장완료", saveData);
+  // 로컬스토리지 저장 후 편집 잠금
+  document.querySelectorAll("[contenteditable]").forEach((el) => {
+    el.setAttribute("contenteditable", "false");
+  });
+  console.log("편집모드 꺼짐");
+});

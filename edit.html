@@ -87,15 +87,15 @@
             <!-- ----- 영수증 구분선-->
 
             <div class="movie-title-box">Movie Title :
-                <span id="movie-title-text" data-key="reviewMoveName" contenteditable="true">밀양</span>
+                <span class="movie-title-text editable" data-key="reviewMoveName" contenteditable="true">밀양</span>
             </div>
 
             <div class="director">Movie Director
-                <div id="dir-name" data-key="directorName" contenteditable="true">이창동</div>
+                <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
             </div>
 
             <!--별점 아이콘-->
-            <div id="star-icons" data-key="starScore">
+            <div class="star-icons editable" data-key="starScore">
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
                 <span><i class="fa-solid fa-star fa-2x"></i></span>
@@ -113,8 +113,8 @@
         </div>
 
         <div class="part-two">
-            <div data-key="writeReview" class="user-review">
-                <div class="reviewText" contenteditable="true">
+            <div data-key="writeReview" class="user-review editable">
+                <div class="reviewText editable" contenteditable="true">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non adipisci neque vitae. Esse
                         quam rem fugit dignissimos ullam quisquam natus earum architecto laboriosam, maiores beatae.
                         Officia rem minus eius voluptate ea. Maxime unde recusandae, tempora ipsum quae odit explicabo
@@ -144,8 +144,10 @@
 
             <!-- 배우카드  -->
             <div class="actor-card-one" data-key="actorCardOne">
-                <div class="actor-name" data-key="actorNameOne" contenteditable="true">전도연</div>
-                <div class="character-name" data-key="chaNameOne" contenteditable="true">이신애 역</div>
+
+                <div class="actor-name editable" data-key="actorNameOne" contenteditable="true">전도연</div>
+
+                <div class="character-name editable" data-key="chaNameOne" contenteditable="true">이신애 역</div>
 
                 <div class="actor-card-click" data-icon="i-good" data-index="1">
                     <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
@@ -153,8 +155,10 @@
             </div>
 
             <div class="actor-card-two" data-key="actorCardTwo">
-                <div class="actor-name" data-key="actorNameTwo" contenteditable="true">송강호</div>
-                <div class="character-name" data-key="chaNameTwo" contenteditable="true">김종찬 역</div>
+
+                <div class="actor-name editable" data-key="actorNameTwo" contenteditable="true">송강호</div>
+
+                <div class="character-name editable" data-key="chaNameTwo" contenteditable="true">김종찬 역</div>
 
                 <div class="actor-card-click" data-icon="i-bad" data-index="2">
                     <i class="fa-regular fa-face-tired fa-2x"></i>
@@ -163,8 +167,9 @@
 
 
             <div class="actor-card-three" data-key="actorCardThree">
-                <div class="actor-name" data-key="actorNameThree" contenteditable="true">조영진</div>
-                <div class="character-name" data-key="chaNameThree" contenteditable="true">박도섭 역</div>
+
+                <div class="actor-name editable" data-key="actorNameThree" contenteditable="true">조영진</div>
+                <div class="character-name editable" data-key="chaNameThree" contenteditable="true">박도섭 역</div>
 
                 <div class='actor-card-click' data-icon="i-soso" data-index="3">
                     <i class="fa-regular fa-face-meh fa-2x"></i>
@@ -174,7 +179,7 @@
 
         <!--actor-card-click 모달 -->
         <dialog class="character-icon-modal">
-            <div class="icons-op" data-icon="actorCardIcons">
+            <div class="icons-op editable" data-icon="actorCardIcons">
                 <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
                 <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
                 <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
@@ -195,7 +200,7 @@
                     </span>
                 </div>
 
-                <div class="move-tag-list" contenteditable="true">
+                <div class="move-tag-list editable" contenteditable="true">
                     <div>#전도연</div>
                     <div>#송강호</div>
                     <div>#이창동</div>
@@ -243,13 +248,8 @@
             </div>
 
             <div class="modebtn">
-                <div class="editbtn">Edit
-                    <i class="fa-solid fa-pen-fancy fa-lg"></i>
-                </div>
-
-                <div class="savebtn">Save
-                    <i class="fa-solid fa-floppy-disk fa-lg"></i>
-                </div>
+                <div class="editbtn">Edit</div>
+                <div class="savebtn">Save</div>
             </div>
 
 
