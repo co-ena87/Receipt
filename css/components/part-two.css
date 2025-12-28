@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sancreek&family=Stardos+Stencil:wght@400;700&display=swap");
 /* 리뷰(영어) 적용 폰트 */
 
+.user-review {
+  min-height: 300px;
+}
+
 .user-review div {
   margin-top: 20px;
   margin-left: 20px;

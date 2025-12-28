@@ -53,19 +53,21 @@ modaInclick.forEach((modal) => {
     const modalEl = event.target;
 
     moadlicon = {
-      modadEl: modal, //카드 div
+      modadEl: modal, //모달
       iconType: modal.dataset.icon, // i 어떤 표정인지
       iconClass: modalEl.className, // 현재 클라스이름
     };
 
-    //카드의 i를 모달에서 고른 아이콘으로 교체
-    // 카드 쪽에 fa-2x 유지
+    //카드의 i를 모달에서 고른 아이콘으로 교체 -> 카드 아이콘 사이즈 fa-2x 유지
     nowicon.iconEl.className = `${moadlicon.iconClass} fa-2x`;
 
-    // moadl 아이콘 선택 후 nowicon iconType 프로퍼티 변경 적용
+    // moadl 아이콘 선택 후 카드 쪽 data-set 갱신
     nowicon.cardEl.dataset.icon = moadlicon.iconType;
 
+    // 새로 선택한 아이콘 기준으로 데이터 모델 갱신
     nowicon.iconType = moadlicon.iconType;
+
+    // 최종 클래스 상태를 데이터 모델에 기록
     nowicon.iconClass = nowicon.iconEl.className;
 
     chariconModal.close();
@@ -77,29 +79,48 @@ const STORAGE_KEY = "resite:edit";
 
 //저장 버튼
 const SaveBtn = document.querySelector(".savebtn");
+
+//편집 버튼
 const EditBtn = document.querySelector(".editbtn");
-const editableElements = document.querySelectorAll("[contenteditable]");
+
+// contenteditable 작성된 요소들 가져오기
+const editableEls = document.querySelectorAll("[contenteditable]");
 
 //edit.html 처음 방문시 바로 편집 막기 코드
-editableElements.forEach((el) => {
+editableEls.forEach((el) => {
   el.setAttribute("contenteditable", "false");
   console.log("편집막힘");
 });
 
 // edit 버튼 클릭시 편집가능 코드
 EditBtn.addEventListener("click", () => {
-  editableElements.forEach((el) => {
+  editableEls.forEach((el) => {
     el.setAttribute("contenteditable", "true");
+    console.log("편집 모드 작동");
   });
-  console.log("편집 모드 작동");
+});
+
+// 편집모드 전환  -> 첫 포커스 되면 기존 previe.html text 지우기
+document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
+  box.addEventListener("focusin", () => {
+    if (box.dataset.cleared === "true") return;
+    box.dataset.cleared = "true";
+    let p = box.querySelector("p");
+    if (!p) {
+      p = document.createElement("p");
+      box.appendChild(p);
+    }
+    p.innerHTML = "<br>";
+  });
+  console.log(box);
 });
 
 //저장 이벤트
 SaveBtn.addEventListener("click", () => {
-  const editableElements = document.querySelectorAll("[data-key]");
+  const dataEls = document.querySelectorAll("[data-key]"); //el
   const saveData = {};
 
-  editableElements.forEach((el) => {
+  dataEls.forEach((el) => {
     const key = el.dataset.key;
     const value = el.textContent.trim();
     saveData[key] = value;
@@ -108,7 +129,8 @@ SaveBtn.addEventListener("click", () => {
   //로컬스토리지 저장
   localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
   console.log("저장완료", saveData);
-  // 로컬스토리지 저장 후 편집 잠금
+
+  // 저장 후 편집 잠금
   document.querySelectorAll("[contenteditable]").forEach((el) => {
     el.setAttribute("contenteditable", "false");
   });
