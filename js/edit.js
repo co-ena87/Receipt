@@ -83,7 +83,7 @@ const SaveBtn = document.querySelector(".savebtn");
 //편집 버튼
 const EditBtn = document.querySelector(".editbtn");
 
-// contenteditable 작성된 요소들 가져오기
+// contenteditable 작성된 요소들 가져오기 UI 요소들
 const editableEls = document.querySelectorAll("[contenteditable]");
 
 //edit.html 처음 방문시 바로 편집 막기 코드
@@ -105,19 +105,19 @@ document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
   box.addEventListener("focusin", () => {
     if (box.dataset.cleared === "true") return;
     box.dataset.cleared = "true";
-    let p = box.querySelector("p");
-    if (!p) {
-      p = document.createElement("p");
-      box.appendChild(p);
-    }
-    p.innerHTML = "<br>";
+
+    //box 내용만 지우기
+    box.textContent = "";
+
+    //커서 들어갈 수 있게 최소 1줄 확보
+    box.innerHTML = "<p><br></p>";
   });
   console.log(box);
 });
 
 //저장 이벤트
 SaveBtn.addEventListener("click", () => {
-  const dataEls = document.querySelectorAll("[data-key]"); //el
+  const dataEls = document.querySelectorAll("[data-key]"); // 저장대상 데이터 요소
   const saveData = {};
 
   dataEls.forEach((el) => {
@@ -136,3 +136,23 @@ SaveBtn.addEventListener("click", () => {
   });
   console.log("편집모드 꺼짐");
 });
+
+// Tag-control
+const tagContainer = document.querySelectorAll(".move-tag-list > div");
+const tagplus = document.querySelectorAll(".tag-plus");
+const tagmin = document.querySelectorAll(".tag-min");
+
+//tagContainer div 생성 기준 최대/ 최소
+const tagMin = 2;
+const tagMax = 9;
+
+// div 추가 시키는 코드
+function addTage() {
+  const div = document.createElement("div");
+  div.textContent = "#";
+  tagContainer.appendChild(div);
+}
+
+while (tagContainer.children.leng < tagMin) {
+  addTage();
+}

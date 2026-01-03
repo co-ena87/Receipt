@@ -27,12 +27,20 @@
   align-items: center;
   width: 80px;
   height: 25px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 17px;
   padding: 2px;
   font-family: "Diphylleia", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.tag-control {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 240px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .share {
