@@ -105,14 +105,12 @@ document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
   box.addEventListener("focusin", () => {
     if (box.dataset.cleared === "true") return;
     box.dataset.cleared = "true";
-
     //box 내용만 지우기
     box.textContent = "";
 
     //커서 들어갈 수 있게 최소 1줄 확보
     box.innerHTML = "<p><br></p>";
   });
-  console.log(box);
 });
 
 //저장 이벤트
@@ -134,25 +132,40 @@ SaveBtn.addEventListener("click", () => {
   document.querySelectorAll("[contenteditable]").forEach((el) => {
     el.setAttribute("contenteditable", "false");
   });
-  console.log("편집모드 꺼짐");
+  console.log("편집모드 꺼짐", saveData);
 });
 
-// Tag-control
-const tagContainer = document.querySelectorAll(".move-tag-list > div");
+//Tag - control;
+const tagContainer = document.querySelector(".move-tag-list");
 const tagplus = document.querySelectorAll(".tag-plus");
 const tagmin = document.querySelectorAll(".tag-min");
 
-//tagContainer div 생성 기준 최대/ 최소
-const tagMin = 2;
-const tagMax = 9;
+//tag-control + 클릭 이벤트
+const plusclick = document.querySelector(".tag-plus i");
 
-// div 추가 시키는 코드
+plusclick.addEventListener("click", () => {
+  addTage();
+});
+
+//tag-control - 클릭 이벤트
+const minusclick = document.querySelector(".tag-min i");
+
+minusclick.addEventListener("click", () => {
+  removeTag();
+});
+
+// tag 의 div 추가 시키는 코드
 function addTage() {
   const div = document.createElement("div");
   div.textContent = "#";
   tagContainer.appendChild(div);
 }
 
-while (tagContainer.children.leng < tagMin) {
-  addTage();
+//tag 의 div 삭제 시키는 코드
+function removeTag() {
+  tagContainer.removeChild(tagContainer.lastElementChild);
 }
+
+//tagContainer div 생성 기준 최대/ 최소
+const tagMin = 2;
+const tagMax = 10;
