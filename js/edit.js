@@ -86,18 +86,24 @@ const EditBtn = document.querySelector(".editbtn");
 // contenteditable 작성된 요소들 가져오기 UI 요소들
 const editableEls = document.querySelectorAll("[contenteditable]");
 
+// 편집 모드 플래그
+let isEditMode = false;
+
 //edit.html 처음 방문시 바로 편집 막기 코드
 editableEls.forEach((el) => {
   el.setAttribute("contenteditable", "false");
   console.log("편집막힘");
 });
+isEditMode = false;
 
 // edit 버튼 클릭시 편집가능 코드
 EditBtn.addEventListener("click", () => {
+  isEditMode = true;
+
   editableEls.forEach((el) => {
     el.setAttribute("contenteditable", "true");
-    console.log("편집 모드 작동");
   });
+  console.log("편집 모드 작동");
 });
 
 // 편집모드 전환  -> 첫 포커스 되면 기존 previe.html text 지우기
@@ -132,6 +138,7 @@ SaveBtn.addEventListener("click", () => {
   document.querySelectorAll("[contenteditable]").forEach((el) => {
     el.setAttribute("contenteditable", "false");
   });
+  isEditMode = false;
   console.log("편집모드 꺼짐", saveData);
 });
 
@@ -140,32 +147,61 @@ const tagContainer = document.querySelector(".move-tag-list");
 const tagplus = document.querySelectorAll(".tag-plus");
 const tagmin = document.querySelectorAll(".tag-min");
 
-//tag-control + 클릭 이벤트
+//tag-control '+' 클릭 이벤트
 const plusclick = document.querySelector(".tag-plus i");
 
 plusclick.addEventListener("click", () => {
+  if (!isEditMode) return;
   addTage();
 });
 
-//tag-control - 클릭 이벤트
+//tag-control '-' 클릭 이벤트
 const minusclick = document.querySelector(".tag-min i");
 
 minusclick.addEventListener("click", () => {
+  if (!isEditMode) return;
   removeTag();
 });
 
-// tag 의 div 추가 시키는 코드
-function addTage() {
-  const div = document.createElement("div");
-  div.textContent = "#";
-  tagContainer.appendChild(div);
-}
-
-//tag 의 div 삭제 시키는 코드
-function removeTag() {
-  tagContainer.removeChild(tagContainer.lastElementChild);
+// 태그 숫자 카운트
+function getTagCount() {
+  return tagContainer.querySelectorAll(":scope > div").length;
 }
 
 //tagContainer div 생성 기준 최대/ 최소
 const tagMin = 2;
 const tagMax = 10;
+
+// tag 의 div 추가 시키는 코드
+function addTage() {
+  const div = document.createElement("div");
+
+  const count = getTagCount();
+  if (count >= tagMax) {
+    alert(`태그는 최대 ${tagMax}까지 추가 가능합니다.`);
+    return;
+  }
+
+  div.textContent = "#";
+  tagContainer.appendChild(div);
+
+  console.log("태그 추가됨 / 현재 개수:", getTagCount());
+}
+
+//tag 의 div 삭제 시키는 코드
+function removeTag() {
+  if (!isEditMode) return;
+
+  const count = getTagCount();
+  if (count <= tagMin) {
+    alert(`태그는 최소 ${tagMin}개 까지입니다.`);
+    return;
+  }
+
+  const last = tagContainer.lastElementChild;
+  if (!last) return; // 안전장치
+
+  tagContainer.removeChild(last);
+
+  console.log("태그 삭제됨 / 현재 개수:", getTagCount());
+}
