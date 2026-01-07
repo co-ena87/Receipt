@@ -99,6 +99,8 @@ isEditMode = false;
 // edit 버튼 클릭시 편집가능 코드
 EditBtn.addEventListener("click", () => {
   isEditMode = true;
+  //기존 editableEls ture 는 유지
+  unlockTags();
 
   editableEls.forEach((el) => {
     el.setAttribute("contenteditable", "true");
@@ -114,8 +116,8 @@ document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
     //box 내용만 지우기
     box.textContent = "";
 
-    //커서 들어갈 수 있게 최소 1줄 확보
-    box.innerHTML = "<p><br></p>";
+    // //커서 들어갈 수 있게 최소 1줄 확보
+    // box.innerHTML = "<p><br></p>";
   });
 });
 
@@ -123,6 +125,9 @@ document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
 SaveBtn.addEventListener("click", () => {
   const dataEls = document.querySelectorAll("[data-key]"); // 저장대상 데이터 요소
   const saveData = {};
+  // 저장 클릭시 기존 tag 저장 로직 유지
+  isEditMode = false;
+  lockTags();
 
   dataEls.forEach((el) => {
     const key = el.dataset.key;
@@ -142,66 +147,128 @@ SaveBtn.addEventListener("click", () => {
   console.log("편집모드 꺼짐", saveData);
 });
 
-//Tag - control;
+//Tag - control
 const tagContainer = document.querySelector(".move-tag-list");
-const tagplus = document.querySelectorAll(".tag-plus");
-const tagmin = document.querySelectorAll(".tag-min");
-
-//tag-control '+' 클릭 이벤트
 const plusclick = document.querySelector(".tag-plus i");
-
-plusclick.addEventListener("click", () => {
-  if (!isEditMode) return;
-  addTage();
-});
-
-//tag-control '-' 클릭 이벤트
 const minusclick = document.querySelector(".tag-min i");
-
-minusclick.addEventListener("click", () => {
-  if (!isEditMode) return;
-  removeTag();
-});
-
-// 태그 숫자 카운트
-function getTagCount() {
-  return tagContainer.querySelectorAll(":scope > div").length;
-}
 
 //tagContainer div 생성 기준 최대/ 최소
 const tagMin = 2;
 const tagMax = 10;
 
-// tag 의 div 추가 시키는 코드
-function addTage() {
-  const div = document.createElement("div");
+// ✅ 태그 숫자 카운트
+function getTagCount() {
+  return tagContainer.querySelectorAll(":scope > .tag").length;
+}
 
+// ✅ 편집 잠금(저장모드/초기 진입)
+function lockTags() {
+  // 컨테이너 자체는 항상 편집 금지
+  tagContainer.setAttribute("contenteditable", "false");
+
+  // 태그 텍스트도 잠금
+  tagContainer.querySelectorAll(".tag-text").forEach((t) => {
+    t.setAttribute("contenteditable", "false");
+  });
+}
+
+// ✅ 편집 모드에서: "클릭한 태그만" 편집 열기
+function unlockTags() {
+  // 컨테이너는 계속 잠금 유지
+  tagContainer.setAttribute("contenteditable", "false");
+
+  // 기존에 열려있던 tag-text 전부 닫기
+  tagContainer.querySelectorAll(".tag-text").forEach((t) => {
+    t.setAttribute("contenteditable", "false");
+  });
+}
+
+// ✅ 처음 로드시 태그 잠금
+lockTags();
+
+// ✅ 태그 클릭하면 편집 열기 (편집모드일 때만)
+tagContainer.addEventListener("click", (e) => {
+  if (!isEditMode) return;
+
+  const textEl = e.target.closest(".tag-text");
+  if (!textEl) return;
+
+  // 전부 잠그고
+  tagContainer.querySelectorAll(".tag-text").forEach((t) => {
+    t.setAttribute("contenteditable", "false");
+  });
+
+  // 클릭한 것만 열기
+  textEl.setAttribute("contenteditable", "true");
+  textEl.focus();
+});
+
+// ✅ 태그 편집 끝나면 다시 잠금
+tagContainer.addEventListener("focusout", (e) => {
+  const textEl = e.target.closest(".tag-text");
+  if (!textEl) return;
+  textEl.setAttribute("contenteditable", "false");
+});
+
+// ✅ Backspace로 '#' 지우는 거 방지 + Enter 줄바꿈 방지
+tagContainer.addEventListener("keydown", (e) => {
+  const textEl = e.target.closest(".tag-text");
+  if (!textEl) return;
+
+  // Enter 방지
+  if (e.key === "Enter") {
+    e.preventDefault();
+    textEl.blur();
+    return;
+  }
+});
+
+// ✅ + 버튼
+plusclick.addEventListener("click", () => {
+  if (!isEditMode) return;
+  addTag();
+});
+
+// ✅ - 버튼
+minusclick.addEventListener("click", () => {
+  if (!isEditMode) return;
+  removeTag();
+});
+
+// ✅ 태그 추가
+function addTag() {
   const count = getTagCount();
   if (count >= tagMax) {
-    alert(`태그는 최대 ${tagMax}까지 추가 가능합니다.`);
+    alert(`태그는 최대 ${tagMax}개까지 추가 가능합니다.`);
     return;
   }
 
-  div.textContent = "#";
-  tagContainer.appendChild(div);
+  const tag = document.createElement("div");
+  tag.className = "tag";
+
+  const span = document.createElement("span");
+  span.className = "tag-text";
+  span.textContent = "";
+  span.setAttribute("contenteditable", "false"); // 클릭할 때만 열리게
+
+  tag.appendChild(span);
+  tagContainer.appendChild(tag);
 
   console.log("태그 추가됨 / 현재 개수:", getTagCount());
 }
 
-//tag 의 div 삭제 시키는 코드
+// ✅ 태그 삭제
 function removeTag() {
-  if (!isEditMode) return;
-
   const count = getTagCount();
   if (count <= tagMin) {
-    alert(`태그는 최소 ${tagMin}개 까지입니다.`);
+    alert(`태그는 최소 ${tagMin}개는 유지해야 합니다.`);
     return;
   }
 
-  const last = tagContainer.lastElementChild;
-  if (!last) return; // 안전장치
+  const last = tagContainer.querySelector(":scope > .tag:last-child");
+  if (!last) return;
 
-  tagContainer.removeChild(last);
+  last.remove();
 
   console.log("태그 삭제됨 / 현재 개수:", getTagCount());
 }

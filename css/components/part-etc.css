@@ -43,6 +43,10 @@
   margin-bottom: 40px;
 }
 
+.tag-text::before {
+  content: "#";
+}
+
 .share {
   font-family: "Rubik 80s Fade", system-ui;
   font-weight: 400;
