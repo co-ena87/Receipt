@@ -6,70 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<link href="./css/style.css" rel="stylesheet" />
-<link href='./css/login.css' rel='stylesheet' />
-
 
 <style>
-    @import "css/components/navBar.css";
+    @import "css/animations/attention.css";
 </style>
 
-
-
-
+<link href="./css/style.css" rel="stylesheet" />
+<link href='./css/login.css' rel='stylesheet' />
+<link href="css/animations/attention.css" rel="stylesheet" />
 
 <body>
-    <h1>log a movie</h1>
+    <h1>당신의 영화를 기록하세요</h1>
 
     <!-- 배경 이미지-->
     <div class='backgroundImg'>
-        <img src="img/background.jpg">
+        <img class="paper-img" src="img/background.jpg">
+        <img class="noise-img" src="img/noise.jpg">
     </div>
 
     <!--로그인폼-->
     <form class="login-form">
         <div class="login-input">
-            <input id="userID" type="text" placeholder="UserID" />
-            <input id="userPW" type="password" placeholder="UserPW" />
-            <button id="login_btn" type="button">Login</button>
+            <input id="userID" type="text" minlength="4" maxlength="11" placeholder=" UserID" required />
+            <input id="userPW" type="password" minlength="4" maxlength="8" placeholder="UserPW" required />
+            <button id="login_btn" type="submit">Login</button>
         </div>
     </form>
 
-
-    <div class='nav-bar-box'>
-        <nav class='nav-bar'>
-            <ul>
-                <div id='nav-bar-text'>
-                    <li>
-                        <a href='./login.html'>Log-in</a>
-                    </li>
-                    <div class='nav-bar-a-line'></div>
-
-                    <li>
-                        <a href='./preview.html'>PreView</a>
-                    </li>
-
-                    <li>
-                        <a href=''>Publish</a>
-                    </li>
-
-                    <li>
-                        <a href=''>Fied</a>
-                    </li>
-
-                    <li>
-                        <a href=''>Set-Up</a>
-
-                    </li>
-
-                    <div class='nav-bar-a-line'></div>
-                    <li>
-                        <a href=''>Log-Out</a>
-                    </li>
-                </div>
-            </ul>
-        </nav>
-    </div>
 
 
     <script src="js/login.js"></script>

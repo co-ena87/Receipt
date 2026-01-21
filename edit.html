@@ -25,14 +25,14 @@
 </style>
 
 <link href="css/style.css" rel="stylesheet" />
-<link href="css/animations/attention.css" rel="stylesheet" />
+<link href="css/preview.css" rel="stylesheet" />
 
 
 <body>
     <!-- 배경 이미지-->
-    <div class="backImg">
-        <img id="base-img" src="img/background.jpg">
-        <img id="noise-img" src="img/noise.jpg">
+    <div class='backgroundImg'>
+        <img class="paper-img" src="img/background.jpg">
+        <img class="noise-img" src="img/noise.jpg">
     </div>
 
     <!--네비게이션 바-->
@@ -49,19 +49,6 @@
                         <a href='./preview.html'>PreView</a>
                     </li>
 
-                    <li>
-                        <a href=''>Publish</a>
-                    </li>
-
-                    <li>
-                        <a href=''>Fied</a>
-                    </li>
-
-                    <li>
-                        <a href=''>Set-Up</a>
-
-                    </li>
-
                     <div class='nav-bar-a-line'></div>
 
                     <li>
@@ -76,11 +63,12 @@
 
     <!--메인 영수증-->
     <div class="receipt-form">
+        <div class="zigzag-top"></div>
         <div class="part-one">
             <div class="big-title">resite</div>
-            <div class="date" data-key="writeData" contenteditable="true">
-                2025.09.12
-            </div>
+
+            <input type="date" class="date" data-key="writeDate" max="2026-12-31" min="1895-01-01" />
+
 
             <!-- ----- 영수증 구분선-->
             <div class="logo-dot-line"></div>
@@ -91,9 +79,9 @@
                 <span class="movie-title-text editable" data-key="reviewMoveName" contenteditable="true">밀양</span>
             </div>
 
-            <div class="director">Movie Director
-                <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
-            </div>
+            <div class="director">Movie Director</div>
+            <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
+
 
             <!--별점 아이콘-->
             <div class="star-icons editable" data-key="starScore">
@@ -114,18 +102,12 @@
         </div>
 
         <div class="part-two">
-            <div class="user-review editable" data-key="writeReview" contenteditable="true" data-clear-on-focus="true">
-                <p class="review-content" contenteditable="true">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non
-                    adipisci neque vitae. Esse
-                    quam rem fugit dignissimos ullam quisquam natus earum architecto laboriosam, maiores beatae.
-                    Officia rem minus eius voluptate ea. Maxime unde recusandae, tempora ipsum quae odit explicabo
-                    suscipit modi libero! Hic reiciendis impedit numquam maiores. Vitae quos at modi alias molestias
-                    temporibus. Facere molestias, aperiam distinctio rerum tempora sit nulla dolore accusantium quis
-                    modi magni pariatur nostrum dignissimos possimus. Unde quisquam, adipisci veritatis beatae
-                    soluta dolorum laboriosam distinctio perspiciatis! Quod dicta quos fugit atque cupiditate eum
-                    temporibus dolore doloribus eius, facere officiis necessitatibus aliquid voluptatem obcaecati
-                    iusto?
+            <div class="user-review editable" data-key="writeReview" data-clear-on-focus="true">
+                <p class="review-content" contenteditable="true" data-placeholder="리뷰를 작성해주세요">
+                    안녕하세요 리시트 프로젝트입니다.
+                    내가 감상한 영화를 자유롭게 리뷰를 남겨보세요.
+                    Hello, this is Resite.
+                    Feel free to leave a review of the movie you’ve watched.
                 </p>
             </div>
         </div>
@@ -221,51 +203,30 @@
             </div>
 
 
-        </div>
 
 
-
-
-
-        <!-- part-three.css 파일속 코드 -->
-        <div class="cast-character-line"></div>
-        <div class="cast-character-line"></div>
-
-
-
-
-        <!--다른 사이트로 공유하기-->
-
-
-        <div class="sharing-thing">
-            <a href="https://www.instagram.com/">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
-
-            <a href="https://www.reddit.com/">
-                <i class="fa-brands fa-reddit fa-2x"></i>
-            </a>
-
-            <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0">
-                <i class="fa-solid fa-blog fa-2x"></i>
-            </a>
-
-            <a href="www.google.co.kr">
-                <i class="fa-brands fa-google fa-2x"></i>
-            </a>
-
-            <a href="https://www.facebook.com/?locale=ko_KR">
-                <i class="fa-brands fa-facebook fa-2x"></i>
-            </a>
-
-            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia"> Watcha-Pedia
+            <div class="modebtn">
+                <div class="editbtn">Edit</div>
+                <div class="savebtn">Save</div>
             </div>
 
-        </div>
 
-        <div class="modebtn">
-            <div class="editbtn">Edit</div>
-            <div class="savebtn">Save</div>
+            <!-- part-three.css 파일속 코드 -->
+            <div class="cast-character-line"></div>
+            <div class="cast-character-line"></div>
+
+            <div class="search-movie">
+                <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
+                <div class="search-bar"><span>영화 정보 찾기</span></div>
+            </div>
+
+            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
+                <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                Watcha-Pedia
+            </div>
+
+
+
         </div>
 
 

@@ -108,16 +108,18 @@ EditBtn.addEventListener("click", () => {
   console.log("편집 모드 작동");
 });
 
-// 편집모드 전환  -> 첫 포커스 되면 기존 previe.html text 지우기
+// 편집 모드 palceholder
 document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
   box.addEventListener("focusin", () => {
+    if (!isEditMode) return;
     if (box.dataset.cleared === "true") return;
     box.dataset.cleared = "true";
-    //box 내용만 지우기
-    box.textContent = "";
 
-    // //커서 들어갈 수 있게 최소 1줄 확보
-    // box.innerHTML = "<p><br></p>";
+    const p = box.querySelector(".review-content");
+    if (!p) return;
+
+    // ✅ p만 비우면 DOM 구조 유지 + placeholder 동작
+    p.textContent = "";
   });
 });
 
@@ -131,7 +133,11 @@ SaveBtn.addEventListener("click", () => {
 
   dataEls.forEach((el) => {
     const key = el.dataset.key;
-    const value = el.textContent.trim();
+
+    const value =
+      el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement
+        ? el.value.trim()
+        : el.textContent.trim();
     saveData[key] = value;
   });
 
@@ -145,6 +151,19 @@ SaveBtn.addEventListener("click", () => {
   });
   isEditMode = false;
   console.log("편집모드 꺼짐", saveData);
+
+  //date
+  dataEls.forEach((el) => {
+    const key = el.dataset.key;
+
+    // ✅ input/textarea면 value로 저장
+    const value =
+      el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement
+        ? el.value.trim()
+        : el.textContent.trim();
+
+    saveData[key] = value;
+  });
 });
 
 //Tag - control

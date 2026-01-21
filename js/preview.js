@@ -19,7 +19,6 @@ stars.forEach((elm, idx) => {
 });
 
 //클릭이벤트
-
 const chariconModal = document.querySelector("dialog");
 
 let nowicon = ""; // actor-card 의 처음 기본값이 담긴 변수
@@ -41,6 +40,16 @@ iconclick.forEach((card) => {
     chariconModal.showModal();
   });
 });
+
+//<h1> username
+const username = document.getElementById("username");
+const loginUser = localStorage.getItem("loginUser");
+
+if (loginUser) {
+  username.textContent = loginUser;
+} else {
+  username.textContent = "unkonwn";
+}
 
 const modaInclick = document.querySelectorAll(".icons-op i");
 modaInclick.forEach((modal) => {

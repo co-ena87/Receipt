@@ -13,8 +13,7 @@
 }
 
 .user-review p {
-  text-align: justify;
-  text-indent: 1em;
+  text-align: left;
   line-height: 1.8;
   font-family: "Stardos Stencil", system-ui;
   font-weight: 600;
@@ -22,9 +21,45 @@
   font-style: normal;
 }
 
-.user-review[contenteditable="true"]:empty::before {
-  content: "리뷰를 입력하세요.";
+/* placeholder: p가 비어있을 때만 보이기 */
+.review-content:empty::before {
+  content: attr(data-placeholder);
   color: #999;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* 기본 p 마진 때문에 레이아웃 흔들리면 고정 */
+.review-content {
+  margin: 0;
+  min-height: 1em;
+
+  white-space: pre-wrap;
+  line-height: 1.25;
+
+  word-break: keep-all; /* 한글 단어 깨짐 방지 */
+  overflow-wrap: anywhere;
+}
+
+/* date placeholder */
+.date:empty::before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-style: italic;
+  pointer-events: none;
+}
+
+/* 날짜 기본 스타일 유지 */
+.date {
+  min-height: 1em;
+  white-space: nowrap;
+}
+
+.date-hint {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.7;
 }
 
 /* 커서 이동 엔터 할때 폰트 무너짐 방지 */

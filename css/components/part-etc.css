@@ -47,27 +47,41 @@
   content: "#";
 }
 
-.share {
-  font-family: "Rubik 80s Fade", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 28px;
+.search-movie {
   margin-left: 40px;
-  margin-top: 130px;
-  margin-bottom: 20px;
-}
-.sharing-thing i {
-  margin-left: 40px;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 60px;
+  display: flex;
+  gap: 4px;
 }
 
+.search-bar {
+  width: 260px;
+  height: 30px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.search-bar span {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+  font-style: italic;
+  opacity: 0.4;
+}
 .watcha-pedia {
   font-family: "Maiden Orange", serif;
   font-weight: 400;
   font-style: normal;
   margin-left: 40px;
-  font-size: 23px;
+  font-size: 25px;
+  margin-top: 40px;
+}
+
+.watcha-pedia i {
+  margin-right: 10px;
 }
 
 .bar-cod img {
