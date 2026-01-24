@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-/* 'Tag'적용 폰트 */
-
-@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
-/* 'share' 적용폰트 */
-
 .move-tag-title {
   font-family: "DotGothic16", sans-serif;
   font-weight: 400;

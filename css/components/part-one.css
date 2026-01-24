@@ -1,20 +1,3 @@
-/* part-one 폰트리스트 */
-
-@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
-/* 'resite' 적용폰트 */
-/* '날짜' 적용폰트 */
-
-@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
-
-/* 'movie-title' 적용폰트 */
-
-@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
-/*'밀양' 적용폰트 */
-
-@import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
-/*'이창동' 적용폰트*/
-/* 'movie director' 적용폰트 */
-
 .part-one {
   display: flex;
   position: relative;
@@ -30,7 +13,9 @@
   font-optical-sizing: 80px;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "BLED" 33, "SCAN" -7;
+  font-variation-settings:
+    "BLED" 33,
+    "SCAN" -7;
   margin-top: 100px;
   margin-left: 5px;
   margin-bottom: 10px;
@@ -42,7 +27,9 @@
   font-optical-sizing: 80px;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "BLED" 33, "SCAN" -7;
+  font-variation-settings:
+    "BLED" 33,
+    "SCAN" -7;
   margin-top: 20px;
   margin-right: -230px;
   margin-bottom: 10px;

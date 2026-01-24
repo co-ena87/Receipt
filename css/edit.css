@@ -1,3 +1,5 @@
+/*  영수증 css*/
+
 body {
   margin: 0;
   padding: 0;
@@ -29,6 +31,7 @@ body {
   filter: blur(2px);
   pointer-events: none;
 }
+
 .noise-img {
   position: absolute;
   inset: 0;
@@ -40,38 +43,27 @@ body {
   pointer-events: none;
 }
 
-/* ===== Zigzag  ===== */
+.receipt-form {
+  position: relative;
+  width: 400px;
+  height: 400vh;
+  margin: 0 auto;
+  z-index: 3;
+  border: 2px solid black;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #fff;
+  margin-top: -230px;
+  overflow: visible;
+}
 
-.receipt-form::before,
-.receipt-form::after {
-  content: "";
+.zigzag-top {
   position: absolute;
   left: 0;
+  top: -14px;
   width: 100%;
-  height: 14px; /* 지그재그 높이 */
-  clip-path: polygon(
-    0% 0%,
-    5% 100%,
-    10% 0%,
-    15% 100%,
-    20% 0%,
-    25% 100%,
-    30% 0%,
-    35% 100%,
-    40% 0%,
-    45% 100%,
-    50% 0%,
-    55% 100%,
-    60% 0%,
-    65% 100%,
-    70% 0%,
-    75% 100%,
-    80% 0%,
-    85% 100%,
-    90% 0%,
-    95% 100%,
-    100% 0%
-  );
+  height: 14px;
+  transform: translateY(1px);
   pointer-events: none;
 }
 
@@ -107,14 +99,6 @@ body {
     100% 100%
   );
   pointer-events: none;
-}
-
-h1 {
-  position: fixed;
-  top: 30px;
-  left: 150px;
-  z-index: 6;
-  margin: 0;
 }
 
 /*  영수증 css*/
