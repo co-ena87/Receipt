@@ -1,3 +1,157 @@
+/*  영수증 css*/
+
+/* body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 500px;
+  padding-top: 500px;
+}
+
+.backgroundImg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.paper-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.9;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.noise-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.receipt-form {
+  position: relative;
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 3;
+  border: 2px solid black;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #fff;
+  margin-top: -230px;
+  overflow: visible;
+}
+
+.zigzag-top {
+  position: absolute;
+  left: 0;
+  top: -14px;
+  width: 100%;
+  height: 14px;
+  transform: translateY(1px);
+  pointer-events: none;
+}
+
+/* Top teeth (pointing up) */
+/* .zigzag-top::before,
+.zigzag-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 14px; /* 지그재그 높이 */
+/* clip-path: polygon(
+    0% 100%,
+    5% 0%,
+    10% 100%,
+    15% 0%,
+    20% 100%,
+    25% 0%,
+    30% 100%,
+    35% 0%,
+    40% 100%,
+    45% 0%,
+    50% 100%,
+    55% 0%,
+    60% 100%,
+    65% 0%,
+    70% 100%,
+    75% 0%,
+    80% 100%,
+    85% 0%,
+    90% 100%,
+    95% 0%,
+    100% 100%
+  );
+  pointer-events: none;
+} */
+
+/*  영수증 css*/
+/* .receipt-form {
+  position: relative;
+  width: 400px;
+  height: 400vh;
+  margin: 0 auto;
+  z-index: 3;
+  border: 2px solid black;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #fff;
+  margin-top: -230px;
+  overflow: visible;
+} */
+
+/* .zigzag-top {
+  position: absolute;
+  left: 0;
+  top: -14px;
+  width: 100%;
+  height: 14px;
+  transform: translateY(1px);
+  pointer-events: none;
+}
+
+/* 1) 지그재그(하얀 종이 톱니) */
+/* .zigzag-top::before {
+  inset: 0;
+  background: #000;
+}
+
+.zigzag-top::after {
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 2px);
+  background: #fff;
+}
+
+/* .receipt-form::before {
+  bottom: -14px;  
+  background: #000; 
+} /*
+
+/* .receipt-form::after {
+  bottom: -12px;
+  left: 2px;
+  width: calc(100% - 4px);
+  background: #fff;
+}   */
+
 body {
   margin: 0;
   width: 100%;
@@ -18,7 +172,6 @@ body {
   z-index: 0;
   overflow: hidden;
 }
-
 .paper-img {
   position: absolute;
   inset: 0;
@@ -183,9 +336,8 @@ h1 {
   font-style: normal;
 }
 
-#dir-name {
+.dir-name {
   margin-top: 20px;
-  margin-right: -300px;
   margin-bottom: 30px;
   font-size: 23px;
   font-family: "Diphylleia", serif;

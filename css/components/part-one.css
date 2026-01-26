@@ -55,26 +55,3 @@
   font-family: "Diphylleia", serif;
   font-weight: 800;
 }
-
-.director {
-  margin-top: 30px;
-  font-size: 23px;
-  font-family: "Sancreek", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.dir-name {
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-bottom: 30px;
-  font-size: 23px;
-  font-family: "Diphylleia", serif;
-  font-weight: lighter;
-  font-style: italic;
-  width: 160px; /* 👈 고정 폭 (디자인에 맞게 조절) */
-  margin: 0 auto; /* 가운데 정렬 */
-  text-align: center; /* 텍스트 가운데 */
-  line-height: 1.4;
-  word-break: keep-all; /* 한글 단어 깨짐 방지 */
-}

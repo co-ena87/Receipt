@@ -10,9 +10,6 @@
     <link href="css/preview.css" rel="stylesheet" />
 </head>
 
-
-
-
 <body>
 
     <!-- 배경 이미지-->
@@ -21,32 +18,35 @@
         <img class="noise-img" src="img/noise.jpg">
     </div>
 
-
-
-
-
     <!--네비게이션 바-->
     <div class='nav-bar-box'>
         <nav class='nav-bar'>
-            <ul class=nav-bar-text>
+            <ul>
                 <li>
-                    <a href='./login.html'>Log-in</a>
-                </li>
-
-
-                <li>
-                    <a href='./preview.html'>PreView</a>
+                    <span class="nav-list">
+                        <a href="preview.html">PreView</a>
+                    </span>
                 </li>
 
                 <li>
-                    <a href=''>Log-Out</a>
+                    <span class="nav-list">
+                        <a href="review.html">Review</a>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="nav-list">
+                        <a href="logout.html">Log-Out</a>
+                    </span>
                 </li>
             </ul>
         </nav>
     </div>
 
+    <!-- 유저 인식 -->
     <h1>
         <span id="username"></span>님 안녕하세요
+        <div class="username-line"></div>
     </h1>
 
 
