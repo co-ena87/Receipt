@@ -1,5 +1,5 @@
 //별점 스코어
-const stars = document.querySelectorAll("#star-icons i");
+const stars = document.querySelectorAll(".star-icons i");
 const userScore = document.getElementById("user-score");
 let rating = 0;
 

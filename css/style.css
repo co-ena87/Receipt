@@ -13,6 +13,6 @@
 @import "./animations/attention.css";
 
 /* 폰트 stlye */
-@import "/css/font.css";
+@import "./font.css";
 
 @import "./components/navBar.css";

@@ -51,7 +51,7 @@
         <div class="part-one">
             <div class="big-title">resite</div>
 
-            <input type="date" class="date" data-key="writeDate" max="2026-12-31" min="1895-01-01" />
+            <input type="date" class="DateInput" data-key="writeDate" max="2026-12-31" min="1895-01-01" disabled />
 
 
             <!-- ----- 영수증 구분선-->
@@ -77,7 +77,7 @@
             </div>
 
             <!--별점 스코어-->
-            <div class='socre-show-box'>
+            <div class="socre-show-box">
                 평점: <span id="user-score">0</span>
             </div>
             <!-- ----- 영수증 구분선-->
@@ -86,7 +86,8 @@
         </div>
 
         <div class="part-two">
-            <div class="user-review editable" data-key="writeReview" data-clear-on-focus="true">
+            <div class="user-review editable" data-key="writeReview" { white-space: pre-line; }
+                data-clear-on-focus="true">
                 <p class="review-content" contenteditable="true" data-placeholder="리뷰를 작성해주세요">
                     안녕하세요 리시트 프로젝트입니다.
                     내가 감상한 영화를 자유롭게 리뷰를 남겨보세요.
@@ -150,7 +151,7 @@
                 <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
                 <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
                 <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
-                <i class="fa-solid fa-ban data-icon=" data-icon="i-null"></i>
+                <i class="fa-solid fa-ban" data-icon="i-null"></i>
             </div>
         </dialog>
 
@@ -210,21 +211,18 @@
             </div>
 
 
+            <div class="bar-cod">
+                <img src="img/barcod.jpg">
+            </div>
 
         </div>
 
-
-
-
-        <div class="bar-cod">
-            <img src="img/barcod.jpg">
-        </div>
 
 
     </div>
 
 
-    <script src='./js/edit.js'></script>
+    <script src="js/review.js"></script>
     <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 
 </body>
