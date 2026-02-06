@@ -1,3 +1,11 @@
+// 로그인 가드: 미로그인 → 로그인 페이지로
+(() => {
+  const user = localStorage.getItem("loginUser");
+  if (!user) {
+    location.replace("login.html");
+  }
+})();
+
 //별점 스코어
 const stars = document.querySelectorAll(".star-icons i");
 const userScore = document.getElementById("user-score");
@@ -10,8 +18,7 @@ function setRating(n) {
   stars.forEach((elm, i) => {
     elm.classList.toggle("active", i < n);
   });
-
-  userScore.textContent = rating;
+  if (userScore) userScore.textContent = rating;
 }
 stars.forEach((elm, idx) => {
   // 마우스클릭
@@ -21,8 +28,8 @@ stars.forEach((elm, idx) => {
 //클릭이벤트
 const chariconModal = document.querySelector("dialog");
 
-let nowicon = ""; // actor-card 의 처음 기본값이 담긴 변수
-let moadlicon = ""; // modalicon안에 아이콘 클릭시 정보
+let nowicon = null; // actor-card 의 처음 기본값이 담긴 변수
+let moadlicon = null; // modalicon안에 아이콘 클릭시 정보
 
 const iconclick = document.querySelectorAll(".actor-card-click");
 iconclick.forEach((card) => {
@@ -48,7 +55,7 @@ const loginUser = localStorage.getItem("loginUser");
 if (loginUser) {
   username.textContent = loginUser;
 } else {
-  username.textContent = "unkonwn";
+  username.textContent = "unknown";
 }
 
 const modaInclick = document.querySelectorAll(".icons-op i");
@@ -57,12 +64,13 @@ modaInclick.forEach((modal) => {
     if (!event.target.matches("i")) return;
     if (!nowicon) {
       alert("배우 아이콘 선택해주세요.");
+      return;
     }
 
     const modalEl = event.target;
 
     moadlicon = {
-      modadEl: modal, //DOM
+      modaIEl: modal, //DOM
       iconType: modal.dataset.icon, // i 상태 값 , 데이터
       iconClass: modalEl.className, //현재 화면에 적용된 스타일
     };

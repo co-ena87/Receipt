@@ -1,7 +1,25 @@
+// 로그인 가드: 미로그인 → 로그인 페이지로
+(() => {
+  const user = localStorage.getItem("loginUser");
+  if (!user) {
+    location.replace("login.html");
+  }
+})();
+
 //별점 스코어
 const stars = document.querySelectorAll(".star-icons i");
 const userScore = document.getElementById("user-score");
 let rating = 0;
+
+//<h1> username
+const username = document.getElementById("username");
+const loginUser = localStorage.getItem("loginUser");
+
+if (loginUser) {
+  username.textContent = loginUser;
+} else {
+  username.textContent = "unknown";
+}
 
 //starScore 레이팅
 function setRating(n) {
@@ -12,7 +30,7 @@ function setRating(n) {
     elm.classList.toggle("active", i < n);
   });
 
-  userScore.textContent = rating;
+  if (userScore) userScore.textContent = rating;
 }
 
 stars.forEach((elm, idx) => {
@@ -26,8 +44,8 @@ stars.forEach((elm, idx) => {
 //배우, 모달 아이콘 클릭 이벤트
 const chariconModal = document.querySelector("dialog");
 
-let nowicon = ""; // actor-card 의 처음 기본값이 담긴 변수
-let moadlicon = ""; // modalicon안에 아이콘 클릭시 정보
+let nowicon = null; // actor-card 의 처음 기본값이 담긴 변수
+let moadlicon = null; // modalicon안에 아이콘 클릭시 정보
 
 const iconclick = document.querySelectorAll(".actor-card-click");
 iconclick.forEach((card) => {
@@ -186,8 +204,8 @@ SaveBtn.addEventListener("click", () => {
   console.log("저장 모드 작동");
 
   //로컬스토리지 저장
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
   saveData.starScore = rating; //1~5 숫자 점수로 저장
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
   console.log("저장완료", saveData);
   // 저장 후 편집 잠금
   document.querySelectorAll("[contenteditable]").forEach((el) => {

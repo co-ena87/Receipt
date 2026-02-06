@@ -112,9 +112,11 @@ body {
 h1 {
   position: fixed;
   top: 130px;
-  right: 150px;
+  right: 160px;
   z-index: 4;
   margin: 0;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .username-line {

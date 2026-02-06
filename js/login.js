@@ -3,6 +3,7 @@ const loginBtn = document.querySelector("#login_btn");
 const userIDinput = document.querySelector("#userID");
 const userPWinput = document.querySelector("#userPW");
 const loginform = document.querySelector(".login-form");
+
 //form sumbit 막기
 loginform.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,7 +16,5 @@ loginform.addEventListener("submit", (e) => {
   document.body.classList.add("page-leave");
   loginBtn.disabled = true;
 
-  setTimeout(() => {
-    window.location.href = "./preview.html";
-  }, 2000);
+  setTimeout(() => (window.location.href = "./preview.html"), 2000);
 });

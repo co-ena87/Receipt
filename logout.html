@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-Out</title>
+
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font: 16px/1.4 system-ui;
+    }
+</style>
+
+<body>
+
+
+
+    <script>
+        // 소프트 로그아웃: 로그인 토큰만 제거
+        localStorage.removeItem('loginUser');
+
+        // 로그인 페이지로 복귀 (뒤로가기 방지용 replace)
+        location.replace('login.html');
+
+    </script>
+</body>
+
+</html>
