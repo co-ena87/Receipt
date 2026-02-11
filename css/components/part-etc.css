@@ -16,6 +16,7 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 .move-tag-list div {
   display: flex;
   align-items: center;
@@ -31,7 +32,7 @@
 
 .tag-control {
   display: flex;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 240px;
   gap: 30px;
   margin-bottom: 40px;
@@ -65,21 +66,23 @@
   font-style: italic;
   opacity: 0.4;
 }
+
 .watcha-pedia {
   font-family: "Maiden Orange", serif;
   font-weight: 400;
   font-style: normal;
   margin-left: 40px;
-  font-size: 25px;
+  font-size: 26px;
   margin-top: 40px;
 }
 
 .watcha-pedia i {
   margin-right: 10px;
+  margin-bottom: 120px;
 }
 
 .bar-cod img {
-  margin-top: 120px;
+  margin-top: 10px;
   margin-bottom: 50px;
   width: 100%;
   pointer-events: none;

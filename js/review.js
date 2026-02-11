@@ -160,7 +160,7 @@ document.querySelectorAll('[data-clear-on-focus="true"]').forEach((box) => {
     const p = box.querySelector(".review-content");
     if (!p) return;
 
-    // ✅ p만 비우면 DOM 구조 유지 + placeholder 동작
+    // p만 비우면 DOM 구조 유지 + placeholder 동작
     p.textContent = "";
   });
 });
@@ -225,12 +225,12 @@ const minusclick = document.querySelector(".tag-min i");
 const tagMin = 2;
 const tagMax = 10;
 
-// ✅ 태그 숫자 카운트
+// 태그 숫자 카운트
 function getTagCount() {
   return tagContainer.querySelectorAll(":scope > .tag").length;
 }
 
-// ✅ 편집 잠금(저장모드/초기 진입)
+// 편집 잠금(저장모드/초기 진입)
 function lockTags() {
   // 컨테이너 자체는 항상 편집 금지
   tagContainer.setAttribute("contenteditable", "false");
@@ -241,7 +241,7 @@ function lockTags() {
   });
 }
 
-// ✅ 편집 모드에서: "클릭한 태그만" 편집 열기
+// 편집 모드에서: "클릭한 태그만" 편집 열기
 function unlockTags() {
   // 컨테이너는 계속 잠금 유지
   tagContainer.setAttribute("contenteditable", "false");
@@ -252,10 +252,10 @@ function unlockTags() {
   });
 }
 
-// ✅ 처음 로드시 태그 잠금
+// 처음 로드시 태그 잠금
 lockTags();
 
-// ✅ 태그 클릭하면 편집 열기 (편집모드일 때만)
+// 태그 클릭하면 편집 열기 (편집모드일 때만)
 tagContainer.addEventListener("click", (e) => {
   if (!isEditMode) return;
 
@@ -279,7 +279,7 @@ tagContainer.addEventListener("focusout", (e) => {
   textEl.setAttribute("contenteditable", "false");
 });
 
-// ✅ Backspace로 '#' 지우는 거 방지 + Enter 줄바꿈 방지
+//  Backspace로 '#' 지우는 거 방지 + Enter 줄바꿈 방지
 tagContainer.addEventListener("keydown", (e) => {
   const textEl = e.target.closest(".tag-text");
   if (!textEl) return;
@@ -292,19 +292,19 @@ tagContainer.addEventListener("keydown", (e) => {
   }
 });
 
-// ✅ + 버튼
+// + 버튼
 plusclick.addEventListener("click", () => {
   if (!isEditMode) return;
   addTag();
 });
 
-// ✅ - 버튼
+// - 버튼
 minusclick.addEventListener("click", () => {
   if (!isEditMode) return;
   removeTag();
 });
 
-// ✅ 태그 추가
+// 태그 추가
 function addTag() {
   const count = getTagCount();
   if (count >= tagMax) {
@@ -326,7 +326,7 @@ function addTag() {
   console.log("태그 추가됨 / 현재 개수:", getTagCount());
 }
 
-// ✅ 태그 삭제
+// 태그 삭제
 function removeTag() {
   const count = getTagCount();
   if (count <= tagMin) {

@@ -7,12 +7,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .backgroundImg {
   position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;
 }
+
 .paper-img {
   position: absolute;
   inset: 0;
@@ -24,6 +26,7 @@ body {
   filter: blur(2px);
   pointer-events: none;
 }
+
 .noise-img {
   position: absolute;
   inset: 0;

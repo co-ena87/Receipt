@@ -16,6 +16,8 @@
   font-weight: 600;
   font-size: 18px;
   font-style: normal;
+  margin: 0;
+  white-space: pre-line;
 }
 
 /* placeholder: p가 비어있을 때만 보이기 */

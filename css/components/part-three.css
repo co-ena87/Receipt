@@ -60,7 +60,7 @@
   width: 300px;
   margin-left: 40px;
   margin-top: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .actor-card-one,
@@ -68,6 +68,10 @@
 .actor-card-three {
   display: flex;
   margin-top: 30px;
+}
+
+.actor-card-three {
+  margin-bottom: 40px;
 }
 
 .actor-card-one div,
