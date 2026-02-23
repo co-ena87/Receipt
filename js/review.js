@@ -69,10 +69,7 @@ const modaInclick = document.querySelectorAll(".icons-op i");
 modaInclick.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (!event.target.matches("i")) return;
-    if (!nowicon) {
-      alert("배우 아이콘 선택해주세요.");
-      return;
-    }
+    if (!nowicon) return;
 
     const modalEl = event.target;
 

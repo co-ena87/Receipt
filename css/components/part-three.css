@@ -20,9 +20,16 @@
   margin-left: 15px;
   font-family: "Diphylleia", serif;
   font-size: 18px;
-  margin-left: 40px;
-  margin-top: 23px;
+  margin-left: 50px;
+  margin-right: -20px;
+  margin-top: 10px;
   margin-bottom: 10px;
+  flex: 0 0 100px;
+  min-width: 100px;
+  min-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .character-card {
@@ -68,32 +75,27 @@
 .actor-card-three {
   display: flex;
   margin-top: 30px;
-}
-
-.actor-card-three {
-  margin-bottom: 40px;
-}
-
-.actor-card-one div,
-.actor-card-two div,
-.actor-card-three div {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 6px;
-  margin-right: 12px;
-}
-
-.actor-name {
-  font-family: "Diphylleia", serif;
-  font-size: 18px;
+  align-items: center;
+  gap: 8px;
 }
 
 .character-name {
   font-family: "Diphylleia", serif;
   font-size: 18px;
-  margin-left: 50px;
+  margin-left: 10px;
+  flex: 0 0 110px;
+  min-width: 110px;
+  min-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .actor-card-click {
-  margin-left: 45px;
+  margin-left: 10px;
+  flex: 0 0 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
