@@ -15,10 +15,8 @@ let rating = 0;
 const username = document.getElementById("username");
 const loginUser = localStorage.getItem("loginUser");
 
-if (loginUser) {
-  username.textContent = loginUser;
-} else {
-  username.textContent = "unknown";
+if (username) {
+  username.textContent = loginUser ?? "unknown";
 }
 
 //starScore 레이팅
@@ -45,7 +43,7 @@ stars.forEach((elm, idx) => {
 const chariconModal = document.querySelector("dialog");
 
 let nowicon = null; // actor-card 의 처음 기본값이 담긴 변수
-let moadlicon = null; // modalicon안에 아이콘 클릭시 정보
+let modalIcon = null; // modalicon안에 아이콘 클릭시 정보
 
 const iconclick = document.querySelectorAll(".actor-card-click");
 iconclick.forEach((card) => {
@@ -61,7 +59,7 @@ iconclick.forEach((card) => {
       iconClass: cardEl.className, // 현재 클라스이름
     };
 
-    chariconModal.showModal();
+    if (chariconModal) chariconModal.showModal();
   });
 });
 
@@ -73,25 +71,24 @@ modaInclick.forEach((modal) => {
 
     const modalEl = event.target;
 
-    moadlicon = {
-      modadEl: modal, //모달
+    modalIcon = {
       iconType: modal.dataset.icon, // i 어떤 표정인지
       iconClass: modalEl.className, // 현재 클라스이름
     };
 
     //카드의 i를 모달에서 고른 아이콘으로 교체 -> 카드 아이콘 사이즈 fa-2x 유지
-    nowicon.iconEl.className = `${moadlicon.iconClass} fa-2x`;
+    nowicon.iconEl.className = `${modalIcon.iconClass} fa-2x`;
 
     // moadl 아이콘 선택 후 카드 쪽 data-set 갱신
-    nowicon.cardEl.dataset.icon = moadlicon.iconType;
+    nowicon.cardEl.dataset.icon = modalIcon.iconType;
 
     // 새로 선택한 아이콘 기준으로 데이터 모델 갱신
-    nowicon.iconType = moadlicon.iconType;
+    nowicon.iconType = modalIcon.iconType;
 
     // 최종 클래스 상태를 데이터 모델에 기록
     nowicon.iconClass = nowicon.iconEl.className;
 
-    chariconModal.close();
+    if (chariconModal) chariconModal.close();
   });
 });
 
@@ -210,7 +207,7 @@ SaveBtn.addEventListener("click", () => {
   });
   isEditMode = false;
   document.body.classList.remove("editing");
-  console.log("편집모드 꺼짐", saveData);
+  console.log("편집모드 꺼짐");
 });
 
 //Tag - control

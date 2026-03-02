@@ -5,24 +5,32 @@ const userPWinput = document.querySelector("#userPW");
 const loginform = document.querySelector(".login-form");
 
 //form sumbit 막기
-loginform.addEventListener("submit", (e) => {
-  e.preventDefault();
+if (loginform) {
+  loginform.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  // 사용자 ID 저장
-  const userID = userIDinput.value.trim();
-  localStorage.setItem("loginUser", userID);
+    // 사용자 ID 저장
+    const userID = userIDinput.value.trim();
 
-  // 중복 클릭 방지
-  loginBtn.disabled = true;
+    if (!userID) {
+      alert("아이디를 입력해주세요.");
+      return;
+    }
 
-  const go = () => (window.location.href = "./preview.html");
+    localStorage.setItem("loginUser", userID);
 
-  function onEnd(evt) {
-    if (evt.target === document.body) go();
-  }
-  document.body.addEventListener("animationend", onEnd, { once: true });
+    // 중복 클릭 방지
+    loginBtn.disabled = true;
 
-  //애니메이션 이벤트 못잡을시 대비용
-  document.body.classList.add("page-leave");
-  setTimeout(go, 2000);
-});
+    const go = () => (window.location.href = "./preview.html");
+
+    function onEnd(evt) {
+      if (evt.target === document.body) go();
+    }
+    document.body.addEventListener("animationend", onEnd, { once: true });
+
+    //애니메이션 이벤트 못잡을시 대비용
+    document.body.classList.add("page-leave");
+    setTimeout(go, 2000);
+  });
+}
