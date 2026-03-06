@@ -114,7 +114,6 @@ let isEditMode = false;
 //edit.html 처음 방문시 바로 편집 막기 코드
 editableEls.forEach((el) => {
   el.setAttribute("contenteditable", "false");
-  console.log("편집막힘");
 });
 isEditMode = false;
 
@@ -128,8 +127,6 @@ EditBtn.addEventListener("click", () => {
     el.setAttribute("contenteditable", "true");
   });
   toggleDateEditable(true);
-
-  console.log("편집 모드 작동");
 });
 
 // disabled 토글 헬퍼 (프로퍼티 + 속성 모두 제어)
@@ -195,19 +192,21 @@ SaveBtn.addEventListener("click", () => {
 
     saveData[key] = clean;
   });
-  console.log("저장 모드 작동");
 
   //로컬스토리지 저장
   saveData.starScore = rating; //1~5 숫자 점수로 저장
   localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
-  console.log("저장완료", saveData);
+
+  // DEBUG PANEL 출력
+  const debug = document.getElementById("debug-data");
+  if (debug) debug.textContent = JSON.stringify(saveData, null, 2);
+
   // 저장 후 편집 잠금
   document.querySelectorAll("[contenteditable]").forEach((el) => {
     el.setAttribute("contenteditable", "false");
   });
   isEditMode = false;
   document.body.classList.remove("editing");
-  console.log("편집모드 꺼짐");
 });
 
 //Tag - control
@@ -316,8 +315,6 @@ function addTag() {
 
   tag.appendChild(span);
   tagContainer.appendChild(tag);
-
-  console.log("태그 추가됨 / 현재 개수:", getTagCount());
 }
 
 // 태그 삭제
@@ -332,8 +329,6 @@ function removeTag() {
   if (!last) return;
 
   last.remove();
-
-  console.log("태그 삭제됨 / 현재 개수:", getTagCount());
 }
 
 // 편집 / 저장 모드 알림창
