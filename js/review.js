@@ -171,6 +171,16 @@ SaveBtn.addEventListener("click", () => {
   dataEls.forEach((el) => {
     const key = el.dataset.key;
 
+    // 태그는 배열로 저장
+    if (key === "movieTagList") {
+      const tags = [...el.querySelectorAll(".tag-text")]
+        .map((tag) => tag.innerText.replace(/\u00A0/g, " ").trim())
+        .filter(Boolean);
+
+      saveData[key] = tags;
+      return;
+    }
+
     let raw;
     if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
       raw = el.value; // input/textarea
@@ -181,17 +191,34 @@ SaveBtn.addEventListener("click", () => {
     // 공통 정리(개행/nbsp 정규화)
     raw = raw.replace(/\r\n?/g, "\n").replace(/\u00A0/g, " ");
 
-    // 리뷰만 줄바꿈 유지, 나머지는 한 줄로
+    //리뷰만 줄바꿈 유지, 나머지는 한 줄 정리
     const clean =
       key === "writeReview"
-        ? raw.trim() // 리뷰: 개행 유지
+        ? raw
+            .split("\n")
+            .map((line) => line.trimEnd())
+            .join("\n")
+            .trim()
         : raw
             .replace(/\n+/g, " ")
             .replace(/[ \t]+/g, " ")
-            .trim(); // 한 줄화
+            .trim();
 
     saveData[key] = clean;
   });
+
+  // 아이콘 상태 저장
+  saveData.actorIconOne =
+    document.querySelector(".actor-card-one .actor-card-click")?.dataset.icon ??
+    "";
+
+  saveData.actorIconTwo =
+    document.querySelector(".actor-card-two .actor-card-click")?.dataset.icon ??
+    "";
+
+  saveData.actorIconThree =
+    document.querySelector(".actor-card-three .actor-card-click")?.dataset
+      .icon ?? "";
 
   //로컬스토리지 저장
   saveData.starScore = rating; //1~5 숫자 점수로 저장
@@ -249,27 +276,18 @@ function unlockTags() {
 lockTags();
 
 // 태그 클릭하면 편집 열기 (편집모드일 때만)
-tagContainer.addEventListener("click", (e) => {
+tagContainer.addEventListener("mousedown", (e) => {
   if (!isEditMode) return;
 
   const textEl = e.target.closest(".tag-text");
   if (!textEl) return;
 
-  // 전부 잠그고
   tagContainer.querySelectorAll(".tag-text").forEach((t) => {
-    t.setAttribute("contenteditable", "false");
+    if (t !== textEl) {
+      t.setAttribute("contenteditable", "false");
+    }
   });
-
-  // 클릭한 것만 열기
   textEl.setAttribute("contenteditable", "true");
-  textEl.focus();
-});
-
-// ✅ 태그 편집 끝나면 다시 잠금
-tagContainer.addEventListener("focusout", (e) => {
-  const textEl = e.target.closest(".tag-text");
-  if (!textEl) return;
-  textEl.setAttribute("contenteditable", "false");
 });
 
 //  Backspace로 '#' 지우는 거 방지 + Enter 줄바꿈 방지
@@ -311,10 +329,29 @@ function addTag() {
   const span = document.createElement("span");
   span.className = "tag-text";
   span.textContent = "";
-  span.setAttribute("contenteditable", "false"); // 클릭할 때만 열리게
-
+  span.setAttribute("contenteditable", "false");
   tag.appendChild(span);
   tagContainer.appendChild(tag);
+
+  // 새로 추가된 태그는 바로 입력 가능하게 열어주기
+  if (isEditMode) {
+    tagContainer.querySelectorAll(".tag-text").forEach((t) => {
+      t.setAttribute("contenteditable", "false");
+    });
+
+    span.setAttribute("contenteditable", "true");
+    span.focus();
+
+    const range = document.createRange();
+    range.selectNodeContents(span);
+    range.collapse(false);
+
+    const selection = window.getSelection();
+    if (selection) {
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
 }
 
 // 태그 삭제
