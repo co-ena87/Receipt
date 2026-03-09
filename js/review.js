@@ -224,10 +224,6 @@ SaveBtn.addEventListener("click", () => {
   saveData.starScore = rating; //1~5 숫자 점수로 저장
   localStorage.setItem(STORAGE_KEY, JSON.stringify(saveData));
 
-  // DEBUG PANEL 출력
-  const debug = document.getElementById("debug-data");
-  if (debug) debug.textContent = JSON.stringify(saveData, null, 2);
-
   // 저장 후 편집 잠금
   document.querySelectorAll("[contenteditable]").forEach((el) => {
     el.setAttribute("contenteditable", "false");
