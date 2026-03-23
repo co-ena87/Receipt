@@ -16,13 +16,11 @@
   font-variation-settings:
     "BLED" 33,
     "SCAN" -7;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-left: 5px;
   margin-bottom: 10px;
   font-size: 40px;
 }
-
-/* input class = date  preview, review 각자의 css에서 스타일 관리*/
 
 .logo-dot-line {
   border: 1px dashed black;

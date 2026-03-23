@@ -110,16 +110,6 @@ body {
   pointer-events: none;
 }
 
-h1 {
-  position: fixed;
-  top: 240px;
-  right: 160px;
-  z-index: 4;
-  margin: 0;
-  font-size: 25px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
 .username-line {
   width: 280px;
   border: 1px solid;
