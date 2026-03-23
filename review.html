@@ -50,190 +50,195 @@
     </h1>
 
     <!--메인 영수증-->
-    <div class="receipt-form">
-        <div class="zigzag-top"></div>
-        <div class="part-one">
-            <div class="big-title">resite</div>
+    <div class="receipt-machine">
+        <div class="printer-slot"></div>
+        <div class="receipt-paper-wrap">
+            <div class="receipt-paper-top"></div>
+            <div class="receipt-form">
+                <div class="zigzag-top"></div>
 
-            <input type="date" class="DateInput" data-key="writeDate" max="2026-12-31" min="1895-01-01" disabled />
-
-
-            <!--영수증 구분선-->
-            <div class="logo-dot-line"></div>
-            <div class="logo-dot-line"></div>
-            <!--영수증 구분선-->
-
-            <div class="movie-title-box">Movie Title :
-                <span class="movie-title-text editable" data-key="movieTitle" contenteditable="true">밀양
-                </span>
-            </div>
-
-            <div class="director">Movie Director</div>
-            <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
+                <div class="part-one">
+                    <div class="big-title">resite</div>
+                    <input type="date" class="DateInput" data-key="writeDate" max="2026-12-31" min="1895-01-01"
+                        disabled />
 
 
-            <!--별점 아이콘-->
-            <div class="star-icons editable">
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-            </div>
+                    <!--영수증 구분선-->
+                    <div class="logo-dot-line"></div>
+                    <div class="logo-dot-line"></div>
+                    <!--영수증 구분선-->
 
-            <!--별점 스코어-->
-            <div class="socre-show-box">
-                평점: <span id="user-score">0</span>
-            </div>
-
-            <!-- 영수증 구분선-->
-            <div class="double-box-dot-line"></div>
-            <!-- 영수증 구분선-->
-        </div>
-
-        <div class="part-two">
-            <div class="user-review editable" data-key="writeReview" data-clear-on-focus="true">
-                <p class="review-content" contenteditable="true" data-placeholder="리뷰를 작성해주세요">
-                    안녕하세요 영수증 프로젝트입니다.
-                    내가 감상한 영화를 자유롭게 리뷰를 남겨보세요.
-                    Hello, this is Resite.
-                    Feel free to leave a review of the movie you’ve watched.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="part-three">
-            <div class="cast-character-box">
-                <div class="cast-character-line"></div>
-                <div class="cast-character-list">
-                    <span>actor</span>
-                    <span>character</span>
-                    <span>?</span>
-                </div>
-
-                <div class="cast-character-line"></div>
-            </div>
-
-            <!-- 배우카드  -->
-            <div class="actor-card-one">
-
-                <div class="actor-name editable" data-key="actorNameOne" contenteditable="true">전도연</div>
-
-                <div class="character-name editable" data-key="characterNameOne" contenteditable="true">이신애</div>
-
-                <div class="actor-card-click" data-icon="i-good" data-index="1">
-                    <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
-                </div>
-            </div>
-
-            <div class="actor-card-two">
-
-                <div class="actor-name editable" data-key="actorNameTwo" contenteditable="true">송강호</div>
-
-                <div class="character-name editable" data-key="characterNameTwo" contenteditable="true">김종찬</div>
-
-                <div class="actor-card-click" data-icon="i-bad" data-index="2">
-                    <i class="fa-regular fa-face-tired fa-2x"></i>
-                </div>
-            </div>
-
-
-            <div class="actor-card-three">
-
-                <div class="actor-name editable" data-key="actorNameThree" contenteditable="true">조영진</div>
-                <div class="character-name editable" data-key="characterNameThree" contenteditable="true">박도섭</div>
-
-                <div class="actor-card-click" data-icon="i-soso" data-index="3">
-                    <i class="fa-regular fa-face-meh fa-2x"></i>
-                </div>
-            </div>
-            <div class="cast-character-line"></div>
-            <div class="cast-character-line"></div>
-
-        </div>
-
-        <!--actor-card-click 모달 -->
-        <dialog class="character-icon-modal">
-            <div class="icons-op editable" data-icon="actorCardIcons">
-                <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
-                <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
-                <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
-                <i class="fa-solid fa-ban" data-icon="i-null"></i>
-            </div>
-        </dialog>
-
-        <div class="modal-outside-hint">
-            <P>아이콘을 클릭하여 배우/배역 평점을 남겨보세요.
-                ESC 키를 누르면 닫힙니다.
-            </P>
-        </div>
-
-        <div class="part-etc">
-            <div class="move-tag">
-                <span class=" tag-icon">
-                    <div class="move-tag-title">Tag
-                        <i class="fa-solid fa-tag fa-xl"></i>
+                    <div class="movie-title-box">Movie Title :
+                        <span class="movie-title-text editable" data-key="movieTitle" contenteditable="true">밀양
+                        </span>
                     </div>
-                </span>
-            </div>
 
-            <div class="tag-control">
-                <div class="tag-plus">
-                    <i class="fa-solid fa-plus fa-xl"></i>
+                    <div class="director">Movie Director</div>
+                    <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
+
+
+                    <!--별점 아이콘-->
+                    <div class="star-icons editable">
+                        <span><i class="fa-solid fa-star fa-2x"></i></span>
+                        <span><i class="fa-solid fa-star fa-2x"></i></span>
+                        <span><i class="fa-solid fa-star fa-2x"></i></span>
+                        <span><i class="fa-solid fa-star fa-2x"></i></span>
+                        <span><i class="fa-solid fa-star fa-2x"></i></span>
+                    </div>
+
+                    <!--별점 스코어-->
+                    <div class="socre-show-box">
+                        평점: <span id="user-score">0</span>
+                    </div>
+
+                    <!-- 영수증 구분선-->
+                    <div class="double-box-dot-line"></div>
+                    <!-- 영수증 구분선-->
                 </div>
 
-                <div class="tag-min">
-                    <i class="fa-solid fa-minus fa-xl"></i>
+                <div class="part-two">
+                    <div class="user-review editable" data-key="writeReview" data-clear-on-focus="true">
+                        <p class="review-content" contenteditable="true" data-placeholder="리뷰를 작성해주세요">
+                            안녕하세요 영수증 프로젝트입니다.
+                            내가 감상한 영화를 자유롭게 리뷰를 남겨보세요.
+                            Hello, this is Resite.
+                            Feel free to leave a review of the movie you’ve watched.
+                        </p>
+                    </div>
                 </div>
 
+
+                <div class="part-three">
+                    <div class="cast-character-box">
+                        <div class="cast-character-line"></div>
+                        <div class="cast-character-list">
+                            <span>actor</span>
+                            <span>character</span>
+                            <span>?</span>
+                        </div>
+
+                        <div class="cast-character-line"></div>
+                    </div>
+
+                    <!-- 배우카드  -->
+                    <div class="actor-card-one">
+                        <div class="actor-name editable" data-key="actorNameOne" contenteditable="true">전도연</div>
+                        <div class="character-name editable" data-key="characterNameOne" contenteditable="true">이신애
+                        </div>
+                        <div class="actor-card-click" data-icon="i-good">
+                            <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="actor-card-two">
+                        <div class="actor-name editable" data-key="actorNameTwo" contenteditable="true">송강호</div>
+                        <div class="character-name editable" data-key="characterNameTwo" contenteditable="true">김종찬
+                        </div>
+                        <div class="actor-card-click" data-icon="i-bad">
+                            <i class="fa-regular fa-face-tired fa-2x"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="actor-card-three">
+                        <div class="actor-name editable" data-key="actorNameThree" contenteditable="true">조영진</div>
+                        <div class="character-name editable" data-key="characterNameThree" contenteditable="true">
+                            박도섭</div>
+                        <div class="actor-card-click" data-icon="i-soso">
+                            <i class="fa-regular fa-face-meh fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="cast-character-line"></div>
+                    <div class="cast-character-line"></div>
+
+                </div>
+
+                <!--actor-card-click 모달 -->
+                <dialog class="character-icon-modal">
+                    <div class="icons-op editable" data-icon="actorCardIcons">
+                        <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
+                        <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
+                        <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
+                        <i class="fa-solid fa-ban" data-icon="i-null"></i>
+                    </div>
+                </dialog>
+
+                <div class="modal-outside-hint">
+                    <P>아이콘을 클릭하여 배우/배역 평점을 남겨보세요.
+                        ESC 키를 누르면 닫힙니다.
+                    </P>
+                </div>
+
+                <div class="part-etc">
+                    <div class="move-tag">
+                        <span class=" tag-icon">
+                            <div class="move-tag-title">Tag
+                                <i class="fa-solid fa-tag fa-xl"></i>
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="tag-control">
+                        <div class="tag-plus">
+                            <i class="fa-solid fa-plus fa-xl"></i>
+                        </div>
+
+                        <div class="tag-min">
+                            <i class="fa-solid fa-minus fa-xl"></i>
+                        </div>
+
+                    </div>
+
+                    <div data-key="movieTagList" class="move-tag-list editable" data-editable="true">
+                        <div class="tag"><span class="tag-text">한국</span></div>
+                        <div class="tag"><span class="tag-text">진지한</span></div>
+                        <div class="tag"><span class="tag-text">슬픈</span></div>
+                        <div class="tag"><span class="tag-text">명작</span></div>
+                        <div class="tag"><span class="tag-text">거짓말</span></div>
+                    </div>
+
+                    <div class="search-bot-line"></div>
+
+                    <div class="search-movie">
+                        <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
+                        <div class="search-bar"><span>영화 정보 찾기</span></div>
+                    </div>
+
+                    <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
+                        <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                        Watcha-Pedia
+
+                        <div onclick="window.open('https://www.google.com/?hl=ko')" class="Google-page">
+                            <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                            Google
+                        </div>
+                    </div>
+
+
+                    <div class="modebtn-bot-line"></div>
+                    <div class="modebtn-bot-line"></div>
+
+                    <div class="modebtn">
+                        <div class="editbtn">Edit</div>
+                        <div class="savebtn">Save</div>
+                    </div>
+
+                    <div class="modebtn-bot-line"></div>
+                    <div class="modebtn-bot-line"></div>
+
+
+                    <div class="bar-cod">
+                        <img src="img/barcod.jpg">
+                    </div>
+
+                </div>
             </div>
-
-            <div data-key="movieTagList" class="move-tag-list editable" data-editable="true">
-                <div class="tag"><span class="tag-text">한국</span></div>
-                <div class="tag"><span class="tag-text">진지한</span></div>
-                <div class="tag"><span class="tag-text">슬픈</span></div>
-                <div class="tag"><span class="tag-text">명작</span></div>
-                <div class="tag"><span class="tag-text">거짓말</span></div>
-            </div>
-
-
-            <div class="search-movie">
-                <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
-                <div class="search-bar"><span>영화 정보 찾기</span></div>
-            </div>
-
-            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
-                <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                Watcha-Pedia
-            </div>
-
-
-            <div class="modebtn-bot-line"></div>
-            <div class="modebtn-bot-line"></div>
-
-            <div class="modebtn">
-                <div class="editbtn">Edit</div>
-                <div class="savebtn">Save</div>
-            </div>
-
-            <div class="modebtn-bot-line"></div>
-            <div class="modebtn-bot-line"></div>
-
-
-            <div class="bar-cod">
-                <img src="img/barcod.jpg">
-            </div>
-
         </div>
 
 
 
-    </div>
-
-
-    <script src="js/review.js"></script>
-    <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+        <script src="js/review.js"></script>
+        <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 
 
 </body>

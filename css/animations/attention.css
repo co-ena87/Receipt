@@ -409,3 +409,47 @@ body.page-leave {
     filter: blur(12px) opacity(0%);
   }
 }
+
+/* 영수증 출력 애니메이션 */
+/* @keyframes receiptPrint {
+  0% {
+    transform: translateY(-24px) scaleY(0.94);
+    opacity: 0.72;
+    filter: blur(0.5px);
+  }
+  60% {
+    transform: translateY(10px) scaleY(1.02);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+} */
+
+@keyframes receiptPrint {
+  0% {
+    transform: translateY(-160px) scaleY(0.6);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(10px) scaleY(1.05);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* @keyframes slotFlash {
+  0% {
+    background: #2f2f2f;
+  }
+  40% {
+    background: #555;
+  }
+  100% {
+    background: #3a3a3a;
+  }
+} */

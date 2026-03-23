@@ -53,7 +53,6 @@ iconclick.forEach((card) => {
 
     nowicon = {
       cardEl: card, //카드 div
-      index: Number(card.dataset.index), // 카드순서
       iconEl: cardEl, // i태그
       iconType: card.dataset.icon, // i 어떤 표정인지
       iconClass: cardEl.className, // 현재 클라스이름
@@ -101,6 +100,9 @@ const SaveBtn = document.querySelector(".savebtn");
 //편집 버튼
 const EditBtn = document.querySelector(".editbtn");
 
+// 영수증 프린트
+const receiptMachine = document.querySelector(".receipt-machine");
+
 // 날짜 input
 const dateInput = document.querySelector(".DateInput");
 toggleDateEditable(false); //페이지 진입시 잠그기
@@ -139,6 +141,19 @@ function toggleDateEditable(isEdit) {
     dateInput.disabled = true; // 프로퍼티
     dateInput.setAttribute("disabled", ""); // 속성
   }
+}
+
+// 영수증 프린트 애니메이션 함수
+function playPrintAnimation() {
+  if (!receiptMachine) return;
+
+  receiptMachine.classList.remove("printing");
+  void receiptMachine.offsetWidth; // 애니메이션 재시작용
+  receiptMachine.classList.add("printing");
+
+  setTimeout(() => {
+    receiptMachine.classList.remove("printing");
+  }, 900);
 }
 
 // 편집 모드 palceholder
@@ -230,6 +245,8 @@ SaveBtn.addEventListener("click", () => {
   });
   isEditMode = false;
   document.body.classList.remove("editing");
+
+  playPrintAnimation();
 });
 
 //Tag - control
