@@ -5,11 +5,11 @@ body {
   overflow-y: auto;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 500px;
-  padding-top: 500px;
+  padding-top: 230px;
+  padding-bottom: 160px;
 }
 
 .backgroundImg {
@@ -127,7 +127,6 @@ body {
   border-top: 0;
   border-bottom: 0;
   background-color: #fff;
-  margin-top: -230px;
   overflow: visible;
 }
 
@@ -141,7 +140,7 @@ body {
   pointer-events: none;
 }
 
-/* 1) 지그재그(하얀 종이 톱니) */
+/* 지그재그(하얀 종이 톱니) */
 .zigzag-top::before {
   inset: 0;
   background: #000;
@@ -202,4 +201,61 @@ body {
   margin-right: -230px;
   margin-bottom: 10px;
   font-size: 20px;
+}
+/* 페이지 정보창 */
+.page-status {
+  position: absolute;
+  top: -190px;
+  left: 49%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  background-color: #dfeee3;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    0 0 10px rgba(0, 255, 120, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+
+.page-status::before {
+  content: "PAGE STATUS";
+  display: block;
+  background-color: rgba(155, 211, 165, 0.65);
+  color: #000;
+  font-family: "Bitcount Grid Double", system-ui;
+  font-size: 22;
+  padding: 10px 10px;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0 0 4px rgba(0, 255, 120, 0.18);
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #dfeee3;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.status-label {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-size: 22;
+  letter-spacing: 0.15em;
+  color: #000;
+  opacity: 0.85;
+}
+
+.status-value {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-size: 22;
+  letter-spacing: 0.05em;
+  color: #000;
 }

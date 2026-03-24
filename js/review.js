@@ -11,7 +11,7 @@ const stars = document.querySelectorAll(".star-icons i");
 const userScore = document.getElementById("user-score");
 let rating = 0;
 
-//<h1> username
+//페이지 정보창
 const username = document.getElementById("username");
 const loginUser = localStorage.getItem("loginUser");
 

@@ -48,7 +48,7 @@ iconclick.forEach((card) => {
   });
 });
 
-//<h1> username
+//페이지 정보 username
 const username = document.getElementById("username");
 const loginUser = localStorage.getItem("loginUser");
 
