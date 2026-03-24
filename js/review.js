@@ -131,6 +131,15 @@ EditBtn.addEventListener("click", () => {
   toggleDateEditable(true);
 });
 
+// Edit/Save 버튼 클릭시 마우스 커서 변경방지
+[EditBtn, SaveBtn].forEach((btn) => {
+  if (!btn) return;
+
+  btn.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+  });
+});
+
 // disabled 토글 헬퍼 (프로퍼티 + 속성 모두 제어)
 function toggleDateEditable(isEdit) {
   if (!dateInput) return;
@@ -148,12 +157,31 @@ function playPrintAnimation() {
   if (!receiptMachine) return;
 
   receiptMachine.classList.remove("printing");
-  void receiptMachine.offsetWidth; // 애니메이션 재시작용
+  void receiptMachine.offsetWidth;
   receiptMachine.classList.add("printing");
 
   setTimeout(() => {
     receiptMachine.classList.remove("printing");
   }, 900);
+}
+
+function scrollToReceiptTop(callback) {
+  if (!receiptMachine) {
+    if (callback) callback();
+    return;
+  }
+
+  const rect = receiptMachine.getBoundingClientRect();
+  const targetY = window.scrollY + rect.top - 200;
+
+  window.scrollTo({
+    top: targetY,
+    behavior: "smooth",
+  });
+
+  setTimeout(() => {
+    if (callback) callback();
+  }, 1100);
 }
 
 // 편집 모드 palceholder
@@ -246,7 +274,10 @@ SaveBtn.addEventListener("click", () => {
   isEditMode = false;
   document.body.classList.remove("editing");
 
-  playPrintAnimation();
+  toast("저장완료 ☑️ ");
+  scrollToReceiptTop(() => {
+    playPrintAnimation();
+  });
 });
 
 //Tag - control

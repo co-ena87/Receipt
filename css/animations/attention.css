@@ -62,11 +62,24 @@
   }
 }
 
-/* Edit hover 애니메이션 */
+/* Edit/Save 버튼 hover 애니메이션 */
 .editbtn:hover,
 .savebtn:hover {
   -webkit-animation: text-flicker-in-glow 0.88s linear both;
   animation: text-flicker-in-glow 0.88s linear both;
+}
+
+/* Edit/Save 버튼 마우스 커서 변경 방지  */
+.editbtn,
+.savebtn {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.editbtn:hover,
+.savebtn:hover {
+  cursor: pointer;
 }
 
 @-webkit-keyframes text-flicker-in-glow {
@@ -411,45 +424,115 @@ body.page-leave {
 }
 
 /* 영수증 출력 애니메이션 */
-/* @keyframes receiptPrint {
-  0% {
-    transform: translateY(-24px) scaleY(0.94);
-    opacity: 0.72;
-    filter: blur(0.5px);
-  }
-  60% {
-    transform: translateY(10px) scaleY(1.02);
-    opacity: 1;
-    filter: blur(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-    opacity: 1;
-    filter: blur(0);
-  }
-} */
+.receipt-machine.printing .receipt-form {
+  animation: receiptPrint 1000ms cubic-bezier(0.2, 0.3, 0.1, 1);
+}
 
 @keyframes receiptPrint {
   0% {
-    transform: translateY(-160px) scaleY(0.6);
-    opacity: 0.5;
+    transform: translateY(-75px);
+  }
+  10% {
+    transform: translateY(-73px);
+  }
+  18% {
+    transform: translateY(-70px);
+  }
+
+  20% {
+    transform: rotateY(-68px);
+  }
+
+  26% {
+    transform: translateY(-65px);
+  }
+
+  30% {
+    transform: translateY(-63px);
+  }
+
+  36% {
+    transform: translateY(-60px);
+  }
+
+  38% {
+    transform: translateY(-57px);
+  }
+
+  40% {
+    transform: translateY(-55px);
+  }
+  47% {
+    transform: translateY(-53px);
   }
   50% {
-    transform: translateY(10px) scaleY(1.05);
+    transform: translateY(-50px);
   }
+  55% {
+    transform: translateY(-47px);
+  }
+
+  60% {
+    transform: translateY(-44px);
+  }
+
+  65% {
+    transform: translateY(-40px);
+  }
+
+  70% {
+    transform: translateY(-38px);
+  }
+
+  73% {
+    transform: translateY(-35px);
+  }
+
+  75% {
+    transform: translateY(-30px);
+  }
+
+  80% {
+    transform: translateY(-29px);
+  }
+
+  85% {
+    transform: translateY(-25px);
+  }
+
+  88% {
+    transform: translateY(-22px);
+  }
+
+  90% {
+    transform: translateY(-19px);
+  }
+
+  93% {
+    transform: translateY(-17px);
+  }
+
+  95% {
+    transform: translateY(-12px);
+  }
+
+  96% {
+    transform: translateY(-9px);
+  }
+
+  97% {
+    transform: translateY(-6px);
+  }
+
+  98% {
+    transform: translateY(-4px);
+  }
+
+  99% {
+    transform: translateY(-3px);
+  }
+
   100% {
-    transform: translateY(0) scaleY(1);
+    transform: translateY(0);
   }
 }
-
-/* @keyframes slotFlash {
-  0% {
-    background: #2f2f2f;
-  }
-  40% {
-    background: #555;
-  }
-  100% {
-    background: #3a3a3a;
-  }
-} */

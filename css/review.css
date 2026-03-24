@@ -257,13 +257,13 @@ body {
   font-weight: lighter;
   font-style: italic;
   width: 160px;
-  margin: 20px auto 30px; /* 媛��대뜲 �뺣젹 */
-  text-align: center; /* �띿뒪�� 媛��대뜲 */
+  margin: 20px auto 30px;
+  text-align: center;
   line-height: 1.4;
-  word-break: keep-all; /* �쒓� �⑥뼱 源⑥쭚 諛⑹� */
+  word-break: keep-all;
 }
 
-/* ���� / �몄쭛 紐⑤뱶 �뚮┝李� */
+/*토스트 메세지 css*/
 .rin-toast {
   position: fixed;
   left: 50%;

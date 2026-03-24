@@ -4,24 +4,64 @@
 
 .character-icon-modal {
   z-index: 5;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+/* .character-icon-modal {
+  z-index: 5;
   width: 35px;
   height: 150px;
   border-radius: 14px;
+} */
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 14px;
+  border-radius: 14px;
+  background: #fff;
 }
 
 .icons-op {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
+/* .icons-op {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+} */
+
+/* 배우카드 아이콘 클릭시 안내 텍스트 */
 
 .modal-outside-hint {
-  /* toast css*/
-  position: fixed;
-  top: 600px;
-  left: 670px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(236, 83, 66);
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.character-icon-modal[open] .modal-outside-hint {
+  opacity: 1;
+}
+
+/* .modal-outside-hint {
+  position: relative;
+  top: 50%;
+  right: 4%;
   font-size: 20px;
   font-style: italic;
   font-weight: bold;
@@ -33,4 +73,4 @@
 
 .character-icon-modal[open] + .modal-outside-hint {
   opacity: 1;
-}
+} */
