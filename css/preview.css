@@ -155,8 +155,8 @@ body {
 }
 
 .receipt-form::before {
-  bottom: -14px; /* 바깥으로 내려서 붙이기 */
-  background: #000; /* 검정 */
+  bottom: -14px;
+  background: #000;
 }
 
 .receipt-form::after {
@@ -183,8 +183,8 @@ body {
   font-weight: lighter;
   font-style: italic;
   width: 160px;
-  margin: 20px auto 30px; /* 가운데 정렬 */
-  text-align: center; /* 텍스트 가운데 */
+  margin: 20px auto 30px;
+  text-align: center;
   line-height: 1.4;
   word-break: keep-all; /* 한글 단어 깨짐 방지 */
 }
