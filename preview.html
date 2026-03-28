@@ -12,11 +12,8 @@
 
 <body>
 
-    <!-- 배경 이미지-->
-    <div class="backgroundImg">
-        <img class="paper-img" src="img/background.jpg">
-        <img class="noise-img" src="img/noise.jpg">
-    </div>
+
+
 
     <!--네비게이션 바-->
     <div class="nav-bar-box">
@@ -123,7 +120,7 @@
             <div class="actor-card-one">
                 <div class="actor-name">전도연</div>
                 <div class="character-name">이신애</div>
-                <div class="actor-card-click" data-icon="i-good" data-index="0">
+                <div class="actor-card-click" data-icon="i-good">
                     <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
                 </div>
             </div>
@@ -131,7 +128,7 @@
             <div class="actor-card-two">
                 <div class="actor-name">송강호</div>
                 <div class="character-name">김종찬</div>
-                <div class="actor-card-click" data-icon="i-bad" data-index="1">
+                <div class="actor-card-click" data-icon="i-bad">
                     <i class="fa-regular fa-face-tired fa-2x"></i>
                 </div>
             </div>
@@ -140,76 +137,77 @@
             <div class="actor-card-three">
                 <div class="actor-name">조영진</div>
                 <div class="character-name">박도섭</div>
-                <div class="actor-card-click" data-icon="i-soso" data-index="2">
+                <div class="actor-card-click" data-icon="i-soso">
                     <i class="fa-regular fa-face-meh fa-2x"></i>
                 </div>
-            </div>
-        </div>
 
-        <!--actor-card-click 모달 -->
-        <dialog class="character-icon-modal">
-            <div class="icons-op">
-                <i class="fa-regular fa-face-laugh-wink" data-icon="i-good"></i>
-                <i class="fa-regular fa-face-meh" data-icon="i-soso"></i>
-                <i class="fa-regular fa-face-tired" data-icon="i-bad"></i>
-                <i class="fa-solid fa-ban data-icon=" data-icon="i-null"></i>
-            </div>
-        </dialog>
 
-        <div class="modal-outside-hint">
-            아이콘을 클릭하여 배우/배역 평점을 남겨보세요.
-            ESC 키를 누르면 닫힙니다.
+            </div>
+            <div class="cast-character-line"></div>
+            <div class="cast-character-line"></div>
         </div>
 
         <div class="part-etc">
-
-            <div class="move-tag">
-                <div class="move-tag-title">Tag
+            <div class="movie-tag">
+                <div class="movie-tag-title">Tag
                     <span class=" tag-icon">
                         <i class="fa-solid fa-tag fa-xl"></i>
                     </span>
                 </div>
 
-                <div class="move-tag-list">
-                    <div>#전도연</div>
-                    <div>#송강호</div>
-                    <div>#이창동</div>
-                    <div>#미스터리</div>
-                    <div>#한국</div>
-                    <div>#K-Movie</div>
-                    <div>#슬픈</div>
+                <div class="tag-control">
+                    <div class="tag-plus">
+                        <i class="fa-solid fa-plus fa-xl"></i>
+                    </div>
+                    <div class="tag-min">
+                        <i class="fa-solid fa-minus fa-xl"></i>
+                    </div>
+
                 </div>
+
+
+                <div class="movie-tag-list" class="movie-tag-list editable">
+                    <div class="tag"><span class="tag-text">한국</span></div>
+                    <div class="tag"><span class="tag-text">충격적</span></div>
+                    <div class="tag"><span class="tag-text">이창호</span></div>
+                    <div class="tag"><span class="tag-text">전도연</span></div>
+                    <div class="tag"><span class="tag-text">한국</span></div>
+                </div>
+
+
+
+                <div class="search-bot-line"></div>
+
+
+                <div class="search-movie">
+                    <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
+                    <div class="search-bar"><span>영화 정보 찾기</span></div>
+                </div>
+
+                <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
+                    <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                    Watcha-Pedia
+                    <div onclick="window.open('https://www.google.com/?hl=ko')" class="Google-page">
+                        <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                        Google
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="bar-cod">
+                    <img src="img/barcod.jpg">
+                </div>
+
+
             </div>
 
-            <!-- part-three.css 파일속 코드 -->
-            <div class="cast-character-line"></div>
-            <div class="cast-character-line"></div>
 
-
-
-            <div class="search-movie">
-                <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
-                <div class="search-bar"><span>영화 정보 찾기</span></div>
-            </div>
-
-            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
-                <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                Watcha-Pedia
-            </div>
-
-
-
-
-            <div class="bar-cod">
-                <img src="img/barcod.jpg">
-            </div>
-
-
-        </div>
-
-
-        <script src="js/preview.js"></script>
-        <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+            <script src="js/preview.js"></script>
+            <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 </body>
 
 

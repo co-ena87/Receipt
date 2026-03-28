@@ -25,29 +25,6 @@ stars.forEach((elm, idx) => {
   elm.addEventListener("click", () => setRating(idx + 1));
 });
 
-//클릭이벤트
-const chariconModal = document.querySelector("dialog");
-
-let nowicon = null; // actor-card 의 처음 기본값이 담긴 변수
-let modalIcon = null; // modalicon안에 아이콘 클릭시 정보
-
-const iconclick = document.querySelectorAll(".actor-card-click");
-iconclick.forEach((card) => {
-  card.addEventListener("click", () => {
-    const cardEl = card.querySelector("i");
-
-    nowicon = {
-      cardEl: card, //DOM div i 클릭이벤트
-      index: Number(card.dataset.index), // 카드순서
-      iconEl: cardEl, // DOM i 태그 조작대상
-      iconType: card.dataset.icon, // i 상태 값, 데이터
-      iconClass: cardEl.className, // 현재 화면에 적용된 스타일
-    };
-
-    if (chariconModal) chariconModal.showModal();
-  });
-});
-
 //페이지 정보 username
 const username = document.getElementById("username");
 const loginUser = localStorage.getItem("loginUser");

@@ -251,17 +251,11 @@ SaveBtn.addEventListener("click", () => {
   });
 
   // 아이콘 상태 저장
-  saveData.actorIconOne =
-    document.querySelector(".actor-card-one .actor-card-click")?.dataset.icon ??
-    "";
+  saveData.actorIconOne = document.querySelector(".actor-card-one .actor-card-click")?.dataset.icon ?? "";
 
-  saveData.actorIconTwo =
-    document.querySelector(".actor-card-two .actor-card-click")?.dataset.icon ??
-    "";
+  saveData.actorIconTwo = document.querySelector(".actor-card-two .actor-card-click")?.dataset.icon ?? "";
 
-  saveData.actorIconThree =
-    document.querySelector(".actor-card-three .actor-card-click")?.dataset
-      .icon ?? "";
+  saveData.actorIconThree = document.querySelector(".actor-card-three .actor-card-click")?.dataset.icon ?? "";
 
   //로컬스토리지 저장
   saveData.starScore = rating; //1~5 숫자 점수로 저장
@@ -281,7 +275,7 @@ SaveBtn.addEventListener("click", () => {
 });
 
 //Tag - control
-const tagContainer = document.querySelector(".move-tag-list");
+const tagContainer = document.querySelector(".movie-tag-list");
 const plusclick = document.querySelector(".tag-plus i");
 const minusclick = document.querySelector(".tag-min i");
 

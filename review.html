@@ -13,11 +13,9 @@
 
 
 <body>
-    <!-- 배경 이미지-->
-    <div class='backgroundImg'>
-        <img class="paper-img" src="img/background.jpg">
-        <img class="noise-img" src="img/noise.jpg">
-    </div>
+    <div class="backgroundImg"></div>
+    <div class="paperImg"></div>
+
 
     <div class="nav-bar-box">
         <nav class="nav-bar">
@@ -126,7 +124,6 @@
                             <span>character</span>
                             <span>?</span>
                         </div>
-
                         <div class="cast-character-line"></div>
                     </div>
 
@@ -183,9 +180,9 @@
 
 
                 <div class="part-etc">
-                    <div class="move-tag">
+                    <div class="movie-tag">
                         <span class=" tag-icon">
-                            <div class="move-tag-title">Tag
+                            <div class="movie-tag-title">Tag
                                 <i class="fa-solid fa-tag fa-xl"></i>
                             </div>
                         </span>
@@ -202,7 +199,7 @@
 
                     </div>
 
-                    <div data-key="movieTagList" class="move-tag-list editable" data-editable="true">
+                    <div data-key="movieTagList" class="movie-tag-list editable" data-editable="true">
                         <div class="tag"><span class="tag-text">한국</span></div>
                         <div class="tag"><span class="tag-text">진지한</span></div>
                         <div class="tag"><span class="tag-text">슬픈</span></div>
@@ -220,11 +217,11 @@
                     <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
                         <i class="fa-regular fa-hand-point-right fa-xl"></i>
                         Watcha-Pedia
+                    </div>
 
-                        <div onclick="window.open('https://www.google.com/?hl=ko')" class="Google-page">
-                            <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                            Google
-                        </div>
+                    <div onclick="window.open('https://www.google.com/?hl=ko')" class="google-page">
+                        <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                        Google
                     </div>
 
 
@@ -240,18 +237,17 @@
                     <div class="modebtn-bot-line"></div>
 
 
-                    <div class="bar-cod">
-                        <img src="img/barcod.jpg">
-                    </div>
 
                 </div>
+                <div class="bar-code">
+                    <img src="img/barcode.png">
+                </div>
             </div>
-        </div>
 
 
 
-        <script src="js/review.js"></script>
-        <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+            <script src="js/review.js"></script>
+            <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 
 
 </body>

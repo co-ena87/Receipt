@@ -1,4 +1,4 @@
-.move-tag-title {
+.movie-tag-title {
   font-family: "DotGothic16", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -8,7 +8,7 @@
   margin-bottom: 40px;
 }
 
-.move-tag-list {
+.movie-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 10px;
@@ -17,7 +17,7 @@
   margin-bottom: 30px;
 }
 
-.move-tag-list div {
+.movie-tag-list div {
   display: flex;
   align-items: center;
   width: 80px;
@@ -93,18 +93,12 @@
   margin-left: 60px;
   font-size: 26px;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
-.watcha-pedia i,
-.google-page i {
-  margin-right: 10px;
-  margin-bottom: 40px;
-}
-
-.bar-cod img {
-  margin-top: 2px;
-  margin-bottom: 50px;
-  width: 100%;
+.bar-code img {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 400px;
   pointer-events: none;
 }
