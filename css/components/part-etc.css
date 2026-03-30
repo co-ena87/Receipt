@@ -99,6 +99,7 @@
 .bar-code img {
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 400px;
+  margin-left: 10px;
+  width: 380px;
   pointer-events: none;
 }

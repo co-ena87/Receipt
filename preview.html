@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1000, initial-scale=0.5">
     <title>PreView</title>
     <link href="css/font.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -13,7 +13,8 @@
 <body>
 
 
-
+    <div class="backgroundImg"></div>
+    <div class="paperImg"></div>
 
     <!--네비게이션 바-->
     <div class="nav-bar-box">
@@ -154,60 +155,68 @@
                         <i class="fa-solid fa-tag fa-xl"></i>
                     </span>
                 </div>
+            </div>
 
-                <div class="tag-control">
-                    <div class="tag-plus">
-                        <i class="fa-solid fa-plus fa-xl"></i>
-                    </div>
-                    <div class="tag-min">
-                        <i class="fa-solid fa-minus fa-xl"></i>
-                    </div>
-
+            <div class="tag-control">
+                <div class="tag-plus">
+                    <i class="fa-solid fa-plus fa-xl"></i>
                 </div>
-
-
-                <div class="movie-tag-list" class="movie-tag-list editable">
-                    <div class="tag"><span class="tag-text">한국</span></div>
-                    <div class="tag"><span class="tag-text">충격적</span></div>
-                    <div class="tag"><span class="tag-text">이창호</span></div>
-                    <div class="tag"><span class="tag-text">전도연</span></div>
-                    <div class="tag"><span class="tag-text">한국</span></div>
+                <div class="tag-min">
+                    <i class="fa-solid fa-minus fa-xl"></i>
                 </div>
-
-
-
-                <div class="search-bot-line"></div>
-
-
-                <div class="search-movie">
-                    <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
-                    <div class="search-bar"><span>영화 정보 찾기</span></div>
-                </div>
-
-                <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
-                    <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                    Watcha-Pedia
-                    <div onclick="window.open('https://www.google.com/?hl=ko')" class="Google-page">
-                        <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                        Google
-                    </div>
-
-
-                </div>
-
-
-
-
-                <div class="bar-cod">
-                    <img src="img/barcod.jpg">
-                </div>
-
 
             </div>
 
 
-            <script src="js/preview.js"></script>
-            <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
+            <div class="movie-tag-list" class="movie-tag-list editable">
+                <div class="tag"><span class="tag-text">한국</span></div>
+                <div class="tag"><span class="tag-text">충격적</span></div>
+                <div class="tag"><span class="tag-text">이창호</span></div>
+                <div class="tag"><span class="tag-text">전도연</span></div>
+                <div class="tag"><span class="tag-text">한국</span></div>
+            </div>
+
+
+
+            <div class="search-bot-line"></div>
+
+            <div class="search-movie">
+                <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
+                <div class="search-bar"><span>영화 정보 찾기</span></div>
+            </div>
+
+            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
+                <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                Watcha-Pedia
+            </div>
+
+            <div onclick="window.open('https://www.google.com/?hl=ko')" class="google-page">
+                <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                Google
+            </div>
+
+            <div class="modebtn-bot-line"></div>
+            <div class="modebtn-bot-line"></div>
+
+            <div class="modebtn">
+                <div class="editbtn">Edit</div>
+                <div class="savebtn">Save</div>
+            </div>
+
+            <div class="modebtn-bot-line"></div>
+            <div class="modebtn-bot-line"></div>
+
+
+
+            <div class="bar-code">
+                <img src="img/cod.jpeg">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/preview.js"></script>
+    <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 </body>
 
 

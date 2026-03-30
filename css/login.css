@@ -6,7 +6,7 @@ body {
   justify-content: center;
 }
 
-.noise-img {
+.backgroundImg img {
   position: absolute;
   inset: 0;
   width: 100%;

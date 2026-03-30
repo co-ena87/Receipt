@@ -165,7 +165,7 @@ body {
   border-top: 0;
   border-bottom: 0;
   overflow: visible;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .zigzag-top {
@@ -192,7 +192,6 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/paper.jpg");
   background-size: cover;
   background-position: center;
-  /* background: #fff; */
 }
 
 .receipt-form::before {
@@ -204,7 +203,6 @@ body {
   bottom: -12px;
   left: 2px;
   width: calc(100% - 4px);
-  /* background: #fff; */
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/paper.jpg");
   background-size: cover;
   background-position: center;
