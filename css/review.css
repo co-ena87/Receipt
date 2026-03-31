@@ -23,7 +23,6 @@ body {
 }
 
 /* 영수증 Zigzag 절취선*/
-
 .receipt-form::before,
 .receipt-form::after {
   content: "";

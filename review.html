@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
-    <link href="css/font.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/review.css" rel="stylesheet" />
-
+    <link href="css/font.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/review.css" rel="stylesheet"/>
 </head>
 
 
@@ -16,7 +15,7 @@
     <div class="backgroundImg"></div>
     <div class="paperImg"></div>
 
-
+    <!--페이지 이동 바-->
     <div class="nav-bar-box">
         <nav class="nav-bar">
             <ul>
@@ -41,67 +40,65 @@
         </nav>
     </div>
 
-
-
-
-    <!--메인 영수증-->
+   
+    
+    <!-- 영수증 기계  -->
     <div class="receipt-machine">
-        <!-- 페이지 정보창 -->
+        <!-- 페이지 정보창     -->
         <div class="page-status">
             <div class="status-row">
                 <span class="status-label">USER</span>
                 <span class="status-value" id="username">User</span>
             </div>
-
+        
             <div class="status-row">
                 <span class="status-label">MODE</span>
                 <span class="status-value">REVIEW</span>
             </div>
         </div>
-
         <div class="printer-slot"></div>
+        <!-- 슬롯에 붙어있는 종이 (출력 애니메이션 관련됨)    -->
         <div class="receipt-paper-wrap">
-            <div class="receipt-paper-top"></div>
-            <div class="receipt-form">
+                <div class="receipt-paper-top"></div>
+                <div class="receipt-form">
                 <div class="zigzag-top"></div>
 
-                <div class="part-one">
-                    <div class="big-title">resite</div>
-                    <input type="date" class="DateInput" data-key="writeDate" max="2026-12-31" min="1895-01-01"
-                        disabled />
+                    <div class="part-one">
+                        <div class="big-title">resite</div>
+                        <input type="date" class="DateInput" data-key="writeDate" max="2026-12-31" min="1895-01-01" disabled />
 
 
-                    <!--영수증 구분선-->
-                    <div class="only-review-dot-line"></div>
-                    <div class="only-review-dot-line"></div>
-                    <!--영수증 구분선-->
+                        <!--리뷰/날짜 포함 구분선-->
+                        <div class="only-review-dot-line"></div>
+                        <div class="only-review-dot-line"></div>
+                        
 
-                    <div class="movie-title-box">Movie Title :
-                        <span class="movie-title-text editable" data-key="movieTitle" contenteditable="true">밀양
-                        </span>
-                    </div>
+                        <div class="movie-title-box">Movie Title :
+                            <span class="movie-title-text editable" data-key="movieTitle" 
+                                contenteditable="true">밀양
+                            </span>
+                        </div>
 
-                    <div class="director">Movie Director</div>
-                    <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
+                        <div class="director">Movie Director</div>
+                        <div class="dir-name editable" data-key="directorName" contenteditable="true">이창동</div>
 
 
-                    <!--별점 아이콘-->
-                    <div class="star-icons editable">
-                        <span><i class="fa-solid fa-star fa-2x"></i></span>
-                        <span><i class="fa-solid fa-star fa-2x"></i></span>
-                        <span><i class="fa-solid fa-star fa-2x"></i></span>
-                        <span><i class="fa-solid fa-star fa-2x"></i></span>
-                        <span><i class="fa-solid fa-star fa-2x"></i></span>
-                    </div>
+                        <!--별점 아이콘-->
+                        <div class="star-icons editable">
+                            <span><i class="fa-solid fa-star fa-2x"></i></span>
+                            <span><i class="fa-solid fa-star fa-2x"></i></span>
+                            <span><i class="fa-solid fa-star fa-2x"></i></span>
+                            <span><i class="fa-solid fa-star fa-2x"></i></span>
+                            <span><i class="fa-solid fa-star fa-2x"></i></span>
+                        </div>
 
-                    <!--별점 스코어-->
-                    <div class="socre-show-box">
-                        평점: <span id="user-score">0</span>
-                    </div>
+                        <!--별점 스코어-->
+                        <div class="socre-show-box">
+                            평점: <span id="user-score">0</span>
+                        </div>
 
-                    <!-- 영수증 구분선-->
-                    <div class="double-box-dot-line"></div>
-                    <!-- 영수증 구분선-->
+                    <div class="star-end-dot-line"></div>
+                
                 </div>
 
                 <div class="part-two">

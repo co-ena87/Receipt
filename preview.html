@@ -11,12 +11,12 @@
 </head>
 
 <body>
-
-
     <div class="backgroundImg"></div>
+
+    <!-- 영수증 배경 이미지 -->
     <div class="paperImg"></div>
 
-    <!--네비게이션 바-->
+    <!--페이지 이동 바-->
     <div class="nav-bar-box">
         <nav class="nav-bar">
             <ul>
@@ -43,6 +43,8 @@
 
 
 
+
+
     <!--메인 영수증-->
     <div class="receipt-form">
         <!-- 페이지 정보창 -->
@@ -51,7 +53,7 @@
                 <span class="status-label">USER</span>
                 <span class="status-value" id="username">User</span>
             </div>
-
+            
             <div class="status-row">
                 <span class="status-label">MODE</span>
                 <span class="status-value">Preview</span>
@@ -59,166 +61,157 @@
         </div>
 
         <div class="zigzag-top"></div>
-        <div class="part-one">
-            <div class="big-title">resite</div>
-            <div class="date">2025.09.12</div>
-            <!--  영수증 구분선-->
-            <div class="logo-dot-line"></div>
-            <div class="logo-dot-line"></div>
-            <!-- 영수증 구분선-->
+            <div class="part-one">
+                <div class="big-title">resite</div>
+                <div class="date">2025.09.12</div>
 
-            <div class="movie-title-box">Movie Title :
-                <span id="movie-title-text">밀양</span>
+                <div class="logo-dot-line"></div>
+                <div class="logo-dot-line"></div>
+
+                <div class="movie-title-box">Movie Title :
+                    <span id="movie-title-text">밀양</span>
+                </div>
+
+                <div class="director">Movie Director
+                    <div id="dir-name">이창동</div>
+                </div>
+
+                <!--별점 아이콘-->
+                <div class="star-icons">
+                    <span><i class="fa-solid fa-star fa-2x"></i></span>
+                    <span><i class="fa-solid fa-star fa-2x"></i></span>
+                    <span><i class="fa-solid fa-star fa-2x"></i></span>
+                    <span><i class="fa-solid fa-star fa-2x"></i></span>
+                    <span><i class="fa-solid fa-star fa-2x"></i></span>
+                </div>
+
+                <!--별점 스코어-->
+                <div class="socre-show-box">
+                    평점: <span id="user-score">0</span>
+                </div>
+                <div class="star-end-dot-line"></div>
             </div>
 
-            <div class="director">Movie Director
-                <div id="dir-name">이창동</div>
-            </div>
-
-            <!--별점 아이콘-->
-            <div class="star-icons">
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-                <span><i class="fa-solid fa-star fa-2x"></i></span>
-            </div>
-
-            <!--별점 스코어-->
-            <div class="socre-show-box">
-                평점: <span id="user-score"> 0</span>
-            </div>
-            <!-- ----- 영수증 구분선-->
-            <div class="double-box-dot-line"></div>
-            <!-- ----- 영수증 구분선-->
-        </div>
-
-        <div class="part-two">
-            <div class="user-review">
-                <div>
-                    <p>
+            <div class="part-two">
+                <div class="user-review">
+                    <div>
+                        <p>
                         안녕하세요 영수증 프로젝트입니다
                         내가 감상한 영화를 자유롭게 리뷰를 남겨보세요
                         Hello, this is Resite
                         Feel free to leave a review of the movie you’ve watched
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-        <div class="part-three">
-            <div class="cast-character-box">
+            <div class="part-three">
+                <div class="cast-character-box">
+
                 <div class="cast-character-line"></div>
-                <div class="cast-character-list">
-                    <span>actor</span>
-                    <span>character</span>
-                    <span>?</span>
+                    <div class="cast-character-list">
+                        <span>actor</span>
+                        <span>character</span>
+                        <span>?</span>
+                    </div>
+                <div class="cast-character-line"></div>
+                </div>
+
+                <div class="actor-card-one">
+                    <div class="actor-name">전도연</div>
+                    <div class="character-name">이신애</div>
+                    <div class="actor-card-click" data-icon="i-good">
+                        <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
+                    </div>
+                </div>
+
+                <div class="actor-card-two">
+                    <div class="actor-name">송강호</div>
+                    <div class="character-name">김종찬</div>
+                    <div class="actor-card-click" data-icon="i-bad">
+                        <i class="fa-regular fa-face-tired fa-2x"></i>
+                    </div>
+                </div>
+
+
+                <div class="actor-card-three">
+                    <div class="actor-name">조영진</div>
+                    <div class="character-name">박도섭</div>
+                    <div class="actor-card-click" data-icon="i-soso">
+                        <i class="fa-regular fa-face-meh fa-2x"></i>
+                    </div>
                 </div>
                 <div class="cast-character-line"></div>
+                <div class="cast-character-line"></div>
+            
             </div>
 
-            <div class="actor-card-one">
-                <div class="actor-name">전도연</div>
-                <div class="character-name">이신애</div>
-                <div class="actor-card-click" data-icon="i-good">
-                    <i class="fa-regular fa-face-laugh-wink fa-2x"></i>
-                </div>
-            </div>
-
-            <div class="actor-card-two">
-                <div class="actor-name">송강호</div>
-                <div class="character-name">김종찬</div>
-                <div class="actor-card-click" data-icon="i-bad">
-                    <i class="fa-regular fa-face-tired fa-2x"></i>
-                </div>
-            </div>
-
-
-            <div class="actor-card-three">
-                <div class="actor-name">조영진</div>
-                <div class="character-name">박도섭</div>
-                <div class="actor-card-click" data-icon="i-soso">
-                    <i class="fa-regular fa-face-meh fa-2x"></i>
+            <div class="part-etc">
+                <div class="movie-tag">
+                    <div class="movie-tag-title">Tag
+                        <span class="tag-icon">
+                            <i class="fa-solid fa-tag fa-xl"></i>
+                        </span>
+                    </div>
                 </div>
 
+                <div class="tag-control">
+                    <div class="tag-plus">
+                        <i class="fa-solid fa-plus fa-xl"></i>
+                    </div>
 
-            </div>
-            <div class="cast-character-line"></div>
-            <div class="cast-character-line"></div>
-        </div>
+                    <div class="tag-min">
+                        <i class="fa-solid fa-minus fa-xl"></i>
+                    </div>
+                </div>    
 
-        <div class="part-etc">
-            <div class="movie-tag">
-                <div class="movie-tag-title">Tag
-                    <span class=" tag-icon">
-                        <i class="fa-solid fa-tag fa-xl"></i>
-                    </span>
+                <div class="movie-tag-list" class="movie-tag-list editable">
+                    <div class="tag"><span class="tag-text">한국</span></div>
+                    <div class="tag"><span class="tag-text">충격적</span></div>
+                    <div class="tag"><span class="tag-text">이창호</span></div>
+                    <div class="tag"><span class="tag-text">전도연</span></div>
+                    <div class="tag"><span class="tag-text">한국</span></div>
                 </div>
-            </div>
-
-            <div class="tag-control">
-                <div class="tag-plus">
-                    <i class="fa-solid fa-plus fa-xl"></i>
-                </div>
-                <div class="tag-min">
-                    <i class="fa-solid fa-minus fa-xl"></i>
+            
+                <div class="search-bot-line"></div>
+                <div class="search-movie">
+                    <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
+                    <div class="search-bar"><span>영화 정보 찾기</span></div>
                 </div>
 
+                <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
+                    <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                    Watcha-Pedia
+                </div>
+
+                <div onclick="window.open('https://www.google.com/?hl=ko')" class="google-page">
+                    <i class="fa-regular fa-hand-point-right fa-xl"></i>
+                    Google
+                </div>
+
+                <!-- Edit/Save 버튼 -->
+                <div class="modebtn-bot-line"></div>
+                <div class="modebtn-bot-line"></div>
+
+                <div class="modebtn">
+                    <div class="editbtn">Edit</div>
+                    <div class="savebtn">Save</div>
+                </div>
+
+                <div class="modebtn-bot-line"></div>
+                <div class="modebtn-bot-line"></div>
+
+                <div class="bar-code">
+                    <img src="img/cod.jpeg">
+                </div>
+            
             </div>
-
-
-            <div class="movie-tag-list" class="movie-tag-list editable">
-                <div class="tag"><span class="tag-text">한국</span></div>
-                <div class="tag"><span class="tag-text">충격적</span></div>
-                <div class="tag"><span class="tag-text">이창호</span></div>
-                <div class="tag"><span class="tag-text">전도연</span></div>
-                <div class="tag"><span class="tag-text">한국</span></div>
-            </div>
-
-
-
-            <div class="search-bot-line"></div>
-
-            <div class="search-movie">
-                <div><i class="fa-solid fa-magnifying-glass fa-2x"></i></div>
-                <div class="search-bar"><span>영화 정보 찾기</span></div>
-            </div>
-
-            <div onclick="window.open('https://pedia.watcha.com/ko-KR')" class="watcha-pedia">
-                <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                Watcha-Pedia
-            </div>
-
-            <div onclick="window.open('https://www.google.com/?hl=ko')" class="google-page">
-                <i class="fa-regular fa-hand-point-right fa-xl"></i>
-                Google
-            </div>
-
-            <div class="modebtn-bot-line"></div>
-            <div class="modebtn-bot-line"></div>
-
-            <div class="modebtn">
-                <div class="editbtn">Edit</div>
-                <div class="savebtn">Save</div>
-            </div>
-
-            <div class="modebtn-bot-line"></div>
-            <div class="modebtn-bot-line"></div>
-
-
-
-            <div class="bar-code">
-                <img src="img/cod.jpeg">
-            </div>
-        </div>
+            
     </div>
 
 
     <script src="js/preview.js"></script>
     <script src="https://kit.fontawesome.com/2781666d72.js" crossorigin="anonymous"></script>
 </body>
-
-
-
 </html>
