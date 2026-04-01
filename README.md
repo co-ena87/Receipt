@@ -1,17 +1,30 @@
-# 🧾 Receipt
-Receipt is a movie review project inspired by the idea of leaving a “receipt” of your movie experience.
-Users can edit and save their reviews, with data stored in localStorage.
 
-Receipt는 영화 감상 경험을 “영수증처럼 기록한다”는 아이디어에서 출발한 영화 리뷰 프로젝트입니다.  
-사용자는 리뷰를 수정하고 저장할 수 있으며, 데이터는 localStorage에 저장됩니다.
+# 🧾 Receipt
+남는 건 내가 콘텐츠를 보고 느낀 경험, 그리고 실제로 봤다는 기억입니다. 영수증으로 소유하세요.
+
+---
 
 ## 🔗 Live Demo
 👉  https://quiet-twilight-bd4491.netlify.app/
 
+---
 
+## 🛠️ 기술 스택
+
+| 분류 | 사용 기술 |
+|---|---|
+| 언어 | HTML5, CSS3, Vanilla JavaScript (ES6+) |
+| 스타일 | CSS Variables, Animation, Clip-path |
+| 데이터 | Web Storage API (localStorage) |
+| UI | Font Awesome, Google Fonts |
+| 배포 | Netlify |
+
+---
 ## 📁 Project Structure
 ```
 Receipt
+├──  _redirects
+├── INTRODUCTION.md
 ├── README.md
 ├── css
 │   ├── animations
@@ -32,9 +45,10 @@ Receipt
 │   ├── review.css
 │   └── style.css
 ├── img
-│   ├── background.jpg
-│   ├── barcod.jpg
-│   └── noise.jpg
+│   ├── background.avif
+│   ├── cod.jpeg
+│   ├── paper.jpg
+│   └── review.gif
 ├── js
 │   ├── login.js
 │   ├── preview.js
@@ -44,8 +58,4 @@ Receipt
 ├── preview.html
 └── review.html
 ```
-
-## 💿 Data Persistence
-During development, a temporary debug panel was used 
-to inspect the JSON data saved in localStorage when the user edited and saved a review.
 
