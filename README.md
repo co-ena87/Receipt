@@ -7,6 +7,9 @@
 ## 🔗 Live Demo
 👉  https://quiet-twilight-bd4491.netlify.app/
 
+
+📄 [프로젝트 소개 보기](INTRODUCTION.md)
+
 ---
 
 ## 🛠️ 기술 스택
